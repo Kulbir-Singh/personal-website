@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useEffect, useState, useRef } from "react";
 
 export default function Sidebar({ isclicked, setIsclicked }) {
   return (
