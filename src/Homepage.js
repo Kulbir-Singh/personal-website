@@ -2,6 +2,8 @@ import { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import P5Wrapper from "react-p5-wrapper";
+
 function useInterval(callback, delay) {
   const savedCallback = useRef();
   // Remember the latest callback.
@@ -122,6 +124,7 @@ const SkillInfo = styled.div`
   padding-top: 180px;
   position: relative;
   top: -50px;
+
   left: -10px;
   height: 0%;
   mix-blend-mode: difference;
@@ -164,7 +167,6 @@ const Info = styled.div`
   align-items: center;
   margin-left: 100px;
   height: 100%;
-
   width: 50%;
   @media (max-width: 800px) {
     justify-content: center;
