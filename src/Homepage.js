@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import P5Wrapper from "react-p5-wrapper";
+import sketch from "./sketch";
+import Boid from "./boid";
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -91,6 +93,8 @@ function Homepage() {
               }
             })}
           </Skills>
+          <P5Wrapper Boid={Boid} />
+          <P5Wrapper sketch={sketch} />
         </SkillInfo>
       </Info>
     </Div>

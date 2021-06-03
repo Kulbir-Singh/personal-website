@@ -1,3 +1,5 @@
+import p5 from "react-p5-wrapper";
+
 class Boid {
   constructor() {
     this.position = createVector(random(width), random(height));
@@ -125,4 +127,30 @@ class Boid {
     stroke(255);
     point(this.position.x, this.position.y);
   }
+}
+
+export default function sketch(p) {
+  const flock = [];
+
+  let alignSlider, cohesionSlider, separationSlider;
+
+  p.setup = function () {
+    p.createCanvas(640, 360);
+    alignSlider = p.createSlider(0, 2, 1, 0.1);
+    cohesionSlider = p.createSlider(0, 2, 1, 0.1);
+    separationSlider = p.createSlider(0, 2, 1, 0.1);
+    for (let i = 0; i < 200; i++) {
+      flock.push(new Boid());
+    }
+  };
+
+  p.draw = function () {
+    p.background(51);
+    for (let boid of flock) {
+      boid.edges();
+      boid.flock(flock);
+      boid.update();
+      boid.show();
+    }
+  };
 }
