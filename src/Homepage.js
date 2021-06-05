@@ -107,9 +107,10 @@ const Img = styled.img`
   right: -55%;
   border: 2px solid #00000010;
   object-fit: cover;
-  z-index: -1;
+  /* z-index: -1; */
   height: 40%;
   box-shadow: 0px 0px 20px #00000010;
+  background-color: white;
   @media (max-width: 1000px) {
     right: -51%;
     top: -76%;
@@ -118,6 +119,7 @@ const Img = styled.img`
     width: 50%;
     top: -35%;
     right: -50%;
+    display: none;
   }
 `;
 
@@ -131,6 +133,7 @@ const PersonalInfo = styled.div`
   display: inline-block;
   align-items: center;
   height: 500px;
+
   /* mix-blend-mode: difference; */
   font-size: 2.5rem;
   @media (max-width: 800px) {
@@ -146,11 +149,11 @@ const PersonalInfo = styled.div`
 const SkillInfo = styled.div`
   width: 100%;
   /* padding-top: 180px; */
-  /* position: relative; */
+  position: relative;
   /* top: -50px;
   left: -10px; */
   height: 0%;
-  /* mix-blend-mode: difference; */
+
   @media (max-width: 800px) {
     min-width: 150px;
     top: 32px;
@@ -159,8 +162,8 @@ const SkillInfo = styled.div`
   }
   @media (max-width: 500px) {
     min-width: 150px;
-    top: -22px;
-    left: -220px;
+    top: 85px;
+    left: -210px;
     height: 0%;
   }
 `;
@@ -172,10 +175,15 @@ const Sideways = styled.div`
   transition-duration: 1s;
   color: black;
   border: 25px solid lightblue;
-  /* mix-blend-mode: difference; */
   background-color: white;
   height: 60%;
   transform: translateX(45%) translateY(115%) rotate(-90deg);
+  /* background: linear-gradient(
+    40deg,
+    lightblue 0%,
+    lightblue 50%,
+    transparent 0%
+  ); */
   @media (max-width: 1300px) {
     height: 50%;
     width: 110%;
@@ -184,9 +192,17 @@ const Sideways = styled.div`
   @media (max-width: 800px) {
     font-size: 40px;
     padding: 10px;
-    border: 15px solid grey;
+    border: 15px solid lightblue;
     margin-left: 20px;
-    transform: translateX(-5px) translateY(225px) rotate(-90deg);
+    width: 100%;
+    background: linear-gradient(
+      45deg,
+      lightblue 50%,
+      lightblue 50%,
+      transparent 0%
+    );
+    transform: translateX(25px) translateY(255px) rotate(-90deg);
+    mix-blend-mode: difference;
   } ;
 `;
 
@@ -212,9 +228,15 @@ const Div = styled.div`
   color: black;
   padding: none;
   height: 100vh;
-  margin: 10px 0px;
+  /* margin: 10px 0px; */
   width: 100%;
-  background-color: transparent;
+  /* background: rgb(255, 113, 150);
+  background: linear-gradient(
+    270deg,
+    rgba(250, 250, 250, 0.12088585434173671) 0%,
+    rgba(113, 221, 255, 0.14889705882352944) 63%
+  ); */
+  /* background-color: transparent; */
 `;
 
 export default Homepage;

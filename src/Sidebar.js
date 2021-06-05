@@ -17,7 +17,7 @@ export default function Sidebar({ isclicked, setIsclicked }) {
 }
 
 const HeaderLink = styled.a`
-  color: black;
+  color: white;
   position: relative;
   text-decoration: none;
   /* mix-blend-mode: difference; */
@@ -48,7 +48,8 @@ const Wrapper = styled.div`
     align-items: center;
     flex-direction: column;
     height: 100%;
-    color: black;
+    color: white;
+    background: rgba(0, 0, 0, 0.92);
     div:nth-child(n) {
       margin: 50px 0;
       padding-top: 30px;

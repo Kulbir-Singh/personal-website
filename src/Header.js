@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 export default function Header({ isclicked, setIsclicked }) {
   return (
     <Ham>
@@ -8,13 +8,13 @@ export default function Header({ isclicked, setIsclicked }) {
       <TopMenu>
         <SubHeader>
           <div>
-            <HeaderLink href="#project">Projects</HeaderLink>
+            <HeaderLink>Projects</HeaderLink>
           </div>
           <div>
-            <HeaderLink href="#about">About</HeaderLink>
+            <HeaderLink to="#about">About</HeaderLink>
           </div>
           <div>
-            <HeaderLink href="#contact">Contact</HeaderLink>
+            <HeaderLink to="#contact">Contact</HeaderLink>
           </div>
         </SubHeader>
       </TopMenu>
@@ -31,9 +31,13 @@ export default function Header({ isclicked, setIsclicked }) {
   );
 }
 
-const HeaderLink = styled.a`
-  color: black;
+const HeaderLink = styled(Link)`
+  color: white;
   text-decoration: none;
+  :focus {
+    padding-bottom: 10px;
+    border-bottom: 2px solid red;
+  }
 `;
 
 const SubHeader = styled.div`
@@ -55,14 +59,17 @@ const TopMenu = styled.div`
     display: none;
   }
 `;
+
 const Name = styled.div`
   border: none;
   padding-left: 20px;
-  color: black;
+  display: flex;
+  align-items: center;
+  color: white;
   cursor: pointer;
   font-size: 1.5em;
   padding-right: 5%;
-  font-weight: bold;
+
   width: 50%;
 `;
 
@@ -72,27 +79,29 @@ const HamDiv = styled.div`
   padding-right: 10px;
   cursor: pointer;
   width: 50%;
+  color: white;
   height: 100%;
   align-items: flex-end;
   @media (max-width: 800px) {
     display: flex;
+    padding: 10px;
+    padding-right: 20px;
   }
 `;
 
 const Ham = styled.div`
   position: fixed;
-  top: -2%;
-  padding-top: 30px;
+  top: 0%;
   width: 100%;
   display: flex;
-  background-color: white;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.92);
   justify-content: space-between;
   align-items: center;
   transition-duration: 1s;
   @media (max-width: 800px) {
     display: flex;
     justify-content: flex-end;
-    top: -2%;
   }
   /* display: none; */
   z-index: 10;
@@ -101,7 +110,7 @@ const Ham = styled.div`
 const Ham1 = styled.div`
   width: 25px;
   height: 5px;
-  background-color: black;
+  background-color: white;
   margin: 2px 0;
   transition-duration: 1s;
   display: none;
@@ -115,7 +124,7 @@ const Ham1 = styled.div`
 const Ham2 = styled.div`
   width: 25px;
   height: 5px;
-  background-color: ${(props) => (props.isclicked ? "black" : "transparent")};
+  background-color: ${(props) => (props.isclicked ? "white" : "transparent")};
   transition-duration: 1s;
   display: none;
   @media (max-width: 800px) {
@@ -126,7 +135,7 @@ const Ham2 = styled.div`
 const Ham3 = styled.div`
   width: 25px;
   height: 5px;
-  background-color: black;
+  background-color: white;
   margin: 2px 0;
   transition-duration: 1s;
   display: none;

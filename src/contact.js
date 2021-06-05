@@ -139,7 +139,7 @@ const Form = styled.form`
   border: 2px solid #00000010;
   background-color: white;
   color: black;
-  box-shadow: 0px 0px 20px #00000010;
+  box-shadow: 0px 10px 20px lightsteelblue;
   border-radius: 2px;
   width: 30vw;
   height: 50%;
@@ -216,7 +216,7 @@ const Textarea = styled.textarea`
 
 const Wrapper = styled.div`
   display: flex;
-  background-color: #f9f9fb;
+  /* background-color: #f9f9fb; */
   color: black;
   height: 100vh;
   font-size: 18px;

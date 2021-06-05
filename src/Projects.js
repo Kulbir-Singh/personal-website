@@ -59,14 +59,15 @@ const Project = styled.div`
   height: 75%;
   margin-left: 100px;
   display: flex;
-  background-color: lightgray;
+  background-color: white;
   align-items: center;
-  box-shadow: 0px 0px 20px #00000010;
-  border: 20px solid white;
+  justify-content: center;
+  border: 2px solid #00000010;
+  /* box-shadow: 0px 10px 20px lightsteelblue; */
+  /* border: 20px sold white; */
   @media (max-width: 800px) {
     margin-top: 0%;
     margin-left: 0px;
-
     height: 75%;
     width: 75%;
   }
@@ -74,17 +75,19 @@ const Project = styled.div`
     height: 100%;
     color: black;
     font-size: 1.5rem;
-    line-height: 35px;
     margin: 0 20px;
     width: 45%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    line-height: 2.75vw;
+    /* line-height: 2.75vw; */
+    @media (max-width: 1200px) {
+      font-size: 2vw;
+    }
     @media (max-width: 800px) {
-      height: 60%;
-      font-size: 3.5vw;
-      line-height: 5vw;
+      height: 50%;
       width: 100%;
+      font-size: 0.9rem;
     }
   }
 
@@ -114,5 +117,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: #1c1c1c;
   align-items: center;
 `;
