@@ -49,8 +49,9 @@ const FinanceImg = styled.img`
     box-shadow: 8px 0px 16px 3px rgba(0, 0, 0, 0);
     right: 0;
   }
-  -webkit-box-shadow: 8px 0px 16px 3px rgba(0, 0, 0, 0.66);
-  box-shadow: 8px 0px 16px 3px rgba(0, 0, 0, 0.66);
+  /* -webkit-box-shadow: 8px 0px 16px 3px rgba(0, 0, 0, 0.66);
+  box-shadow: 8px 0px 16px 3px rgba(0, 0, 0, 0.66); */
+  box-shadow: 0px 0px 20px #00000010;
 `;
 
 const Project = styled.div`
@@ -60,10 +61,12 @@ const Project = styled.div`
   display: flex;
   background-color: lightgray;
   align-items: center;
+  box-shadow: 0px 0px 20px #00000010;
   border: 20px solid white;
   @media (max-width: 800px) {
-    margin-top: 20%;
+    margin-top: 0%;
     margin-left: 0px;
+
     height: 75%;
     width: 75%;
   }
@@ -110,6 +113,6 @@ const Wrapper = styled.div`
   padding-top: 20vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
 `;

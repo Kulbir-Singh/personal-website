@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Contact from "./contact";
 import Homepage from "./Homepage";
 import Projects from "./Projects";
 
@@ -16,7 +17,7 @@ function App() {
           <Projects />
         </section>
         <section id="contact">
-          <Projects />
+          <Contact />
         </section>
       </Container>
     </Wrapper>
@@ -37,8 +38,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  height: 100vh;
-
+  height: 99vh;
   overflow: hidden;
 `;
 

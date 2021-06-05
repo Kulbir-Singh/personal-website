@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import pic from "./resource/profile.png";
 import P5Wrapper from "react-p5-wrapper";
 import sketch from "./sketch";
 import Boid from "./boid";
@@ -67,12 +68,11 @@ function Homepage() {
   }, 4000);
   return (
     <Div>
-      {" "}
       <Header isclicked={isclicked} setIsclicked={setIsclicked} />
       <Info>
         <Sidebar isclicked={isclicked} setIsclicked={setIsclicked} />
         <PersonalInfo>
-          <div>Kulbir Singh</div>
+          {/* <div>Kulbir Singh</div> */}
           <Sideways>Full Stack Web Developer</Sideways>
         </PersonalInfo>
         <SkillInfo>
@@ -93,13 +93,33 @@ function Homepage() {
               }
             })}
           </Skills>
-          <P5Wrapper Boid={Boid} />
-          <P5Wrapper sketch={sketch} />
         </SkillInfo>
+        {/*  */}
       </Info>
+      <Img src={pic} />
     </Div>
   );
 }
+
+const Img = styled.img`
+  position: relative;
+  top: -75%;
+  right: -55%;
+  border: 2px solid #00000010;
+  object-fit: cover;
+  z-index: -1;
+  height: 40%;
+  box-shadow: 0px 0px 20px #00000010;
+  @media (max-width: 1000px) {
+    right: -51%;
+    top: -76%;
+  }
+  @media (max-width: 800px) {
+    width: 50%;
+    top: -35%;
+    right: -50%;
+  }
+`;
 
 const Skills = styled.div`
   display: flex;
@@ -111,13 +131,13 @@ const PersonalInfo = styled.div`
   display: inline-block;
   align-items: center;
   height: 500px;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   font-size: 2.5rem;
   @media (max-width: 800px) {
     padding-top: 65%;
   }
   div:nth-child(1) {
-    color: white;
+    color: black;
     font-weight: lighter;
     margin-left: 15px;
   }
@@ -125,13 +145,12 @@ const PersonalInfo = styled.div`
 
 const SkillInfo = styled.div`
   width: 100%;
-  padding-top: 180px;
-  position: relative;
-  top: -50px;
-
-  left: -10px;
+  /* padding-top: 180px; */
+  /* position: relative; */
+  /* top: -50px;
+  left: -10px; */
   height: 0%;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   @media (max-width: 800px) {
     min-width: 150px;
     top: 32px;
@@ -152,15 +171,20 @@ const Sideways = styled.div`
   font-size: 2.25rem;
   transition-duration: 1s;
   color: black;
-  border: 25px solid white;
-  mix-blend-mode: difference;
-  background-color: lightgray;
-  height: 40%;
+  border: 25px solid lightblue;
+  /* mix-blend-mode: difference; */
+  background-color: white;
+  height: 60%;
   transform: translateX(45%) translateY(115%) rotate(-90deg);
+  @media (max-width: 1300px) {
+    height: 50%;
+    width: 110%;
+    transform: translateX(15px) translateY(290px) rotate(-90deg);
+  }
   @media (max-width: 800px) {
     font-size: 40px;
     padding: 10px;
-    border: 15px solid white;
+    border: 15px solid grey;
     margin-left: 20px;
     transform: translateX(-5px) translateY(225px) rotate(-90deg);
   } ;
@@ -178,17 +202,19 @@ const Info = styled.div`
 `;
 
 const GeneratedTxt = styled.div`
-  color: white;
+  color: black;
   font-size: 3rem;
 `;
+
 const Div = styled.div`
   /* border: 2px solid black; */
   margin: none;
-  color: white;
+  color: black;
   padding: none;
   height: 100vh;
-  margin: 10px 20px;
-  background-color: black;
+  margin: 10px 0px;
+  width: 100%;
+  background-color: transparent;
 `;
 
 export default Homepage;
