@@ -4,17 +4,17 @@ export default function Header({ isclicked, setIsclicked }) {
   return (
     <Ham>
       {" "}
-      <Name>Kulbir Singh</Name>
+      <Name href="#home">Kulbir Singh</Name>
       <TopMenu>
         <SubHeader>
           <div>
-            <HeaderLink>Projects</HeaderLink>
+            <HeaderLink href="#project">Projects</HeaderLink>
           </div>
           <div>
-            <HeaderLink to="#about">About</HeaderLink>
+            <HeaderLink href="#about">About</HeaderLink>
           </div>
           <div>
-            <HeaderLink to="#contact">Contact</HeaderLink>
+            <HeaderLink href="#contact">Contact</HeaderLink>
           </div>
         </SubHeader>
       </TopMenu>
@@ -31,12 +31,12 @@ export default function Header({ isclicked, setIsclicked }) {
   );
 }
 
-const HeaderLink = styled(Link)`
+const HeaderLink = styled.a`
   color: white;
   text-decoration: none;
   :focus {
     padding-bottom: 10px;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid white;
   }
 `;
 
@@ -54,14 +54,14 @@ const SubHeader = styled.div`
 const TopMenu = styled.div`
   width: 50%;
   display: flex;
-
   @media (max-width: 800px) {
     display: none;
   }
 `;
 
-const Name = styled.div`
+const Name = styled.a`
   border: none;
+  text-decoration: none;
   padding-left: 20px;
   display: flex;
   align-items: center;
@@ -137,6 +137,7 @@ const Ham3 = styled.div`
   height: 5px;
   background-color: white;
   margin: 2px 0;
+  color: white;
   transition-duration: 1s;
   display: none;
   @media (max-width: 800px) {

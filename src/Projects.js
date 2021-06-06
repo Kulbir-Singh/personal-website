@@ -55,8 +55,8 @@ const FinanceImg = styled.img`
 `;
 
 const Project = styled.div`
-  width: 60%;
-  height: 75%;
+  width: 70%;
+  height: 70%;
   margin-left: 100px;
   display: flex;
   background-color: white;
@@ -68,8 +68,8 @@ const Project = styled.div`
   @media (max-width: 800px) {
     margin-top: 0%;
     margin-left: 0px;
-    height: 75%;
-    width: 75%;
+    height: 65%;
+    width: 85%;
   }
   div:nth-child(2) {
     height: 100%;
@@ -112,11 +112,10 @@ const Project = styled.div`
 `;
 
 const Wrapper = styled.div`
-  height: 90vh;
-  padding-top: 20vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #1c1c1c;
+  background: rgba(28, 28, 28, 1);
   align-items: center;
 `;

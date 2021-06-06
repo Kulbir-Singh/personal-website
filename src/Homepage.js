@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
-import pic from "./resource/profile.png";
+import pic from "./resource/profile1.png";
 import P5Wrapper from "react-p5-wrapper";
 import sketch from "./sketch";
 import Boid from "./boid";
@@ -94,23 +94,43 @@ function Homepage() {
             })}
           </Skills>
         </SkillInfo>
-        {/*  */}
-      </Info>
-      <Img src={pic} />
+      </Info>{" "}
+      <Description>
+        I specialize in Web Developing. Experienced on both front-end and
+        back-end
+      </Description>
     </Div>
   );
 }
+
+const Description = styled.h1`
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  justify-content: center;
+  top: -35%;
+  left: 30%;
+  width: 60%;
+  min-height: 200px;
+  background: white;
+  border: 10px solid black;
+  @media (max-width: 800px) {
+    top: -50%;
+    left: 38%;
+    width: 50%;
+  }
+`;
 
 const Img = styled.img`
   position: relative;
   top: -75%;
   right: -55%;
-  border: 2px solid #00000010;
+  /* border: 2px solid #00000010; */
   object-fit: cover;
   /* z-index: -1; */
   height: 40%;
-  box-shadow: 0px 0px 20px #00000010;
-  background-color: white;
+  /* box-shadow: 0px 0px 20px #00000010; */
   @media (max-width: 1000px) {
     right: -51%;
     top: -76%;
@@ -126,94 +146,75 @@ const Img = styled.img`
 const Skills = styled.div`
   display: flex;
   flex-direction: column;
+  height: 200px;
 `;
 
 const PersonalInfo = styled.div`
-  /* border: 2px solid green; */
-  display: inline-block;
-  align-items: center;
-  height: 500px;
-
   /* mix-blend-mode: difference; */
-  font-size: 2.5rem;
   @media (max-width: 800px) {
-    padding-top: 65%;
   }
+  font-size: 2.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
   div:nth-child(1) {
     color: black;
     font-weight: lighter;
-    margin-left: 15px;
-  }
-`;
-
-const SkillInfo = styled.div`
-  width: 100%;
-  /* padding-top: 180px; */
-  position: relative;
-  /* top: -50px;
-  left: -10px; */
-  height: 0%;
-
-  @media (max-width: 800px) {
-    min-width: 150px;
-    top: 32px;
-    left: -220px;
-    height: 0%;
-  }
-  @media (max-width: 500px) {
-    min-width: 150px;
-    top: 85px;
-    left: -210px;
-    height: 0%;
   }
 `;
 
 const Sideways = styled.div`
-  text-orientation: sideways;
-  transform-origin: 0 0;
-  font-size: 2.25rem;
+  /* text-orientation: sideways; */
+  /* transform-origin: 0 0; */
+  font-size: 3.5rem;
   transition-duration: 1s;
   color: black;
-  border: 25px solid lightblue;
-  background-color: white;
-  height: 60%;
-  transform: translateX(45%) translateY(115%) rotate(-90deg);
-  /* background: linear-gradient(
-    40deg,
-    lightblue 0%,
-    lightblue 50%,
-    transparent 0%
-  ); */
+  border: 10px solid black;
+  width: 75%;
+  position: relative;
+  top: 40%;
+  height: 500px;
+  /* transform: translateX(45%) translateY(115%); */
   @media (max-width: 1300px) {
-    height: 50%;
-    width: 110%;
-    transform: translateX(15px) translateY(290px) rotate(-90deg);
+    /* transform: translateX(15px) translateY(290px) ; */
   }
   @media (max-width: 800px) {
-    font-size: 40px;
-    padding: 10px;
-    border: 15px solid lightblue;
-    margin-left: 20px;
-    width: 100%;
+    top: 20%;
     background: linear-gradient(
       45deg,
-      lightblue 50%,
-      lightblue 50%,
-      transparent 0%
+      #c5f1fc 50%,
+      #f0fff6 50%,
+      transparent 50%
     );
-    transform: translateX(25px) translateY(255px) rotate(-90deg);
-    mix-blend-mode: difference;
+    /* transform: translateX(25px) translateY(255px) rotate(-90deg); */
   } ;
+`;
+
+const SkillInfo = styled.div`
+  width: 73%;
+  /* padding-top: 180px; */
+  /* position: relative; */
+  /* top: -50px;
+  left: -10px; */
+  position: relative;
+  top: -23%;
+  height: 100%;
+  @media (max-width: 800px) {
+    top: -25%;
+  }
 `;
 
 const Info = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 100px;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
-  width: 50%;
+  width: 100%;
   @media (max-width: 800px) {
     justify-content: center;
+    flex-direction: column;
   } ;
 `;
 
