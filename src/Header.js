@@ -4,7 +4,9 @@ export default function Header({ isclicked, setIsclicked }) {
   return (
     <Ham>
       {" "}
-      <Name href="#home">Kulbir Singh</Name>
+      <Name href="#home">
+        K<Extra>ulbir</Extra> S<Extra>ingh</Extra>
+      </Name>
       <TopMenu>
         <SubHeader>
           <div>
@@ -31,12 +33,84 @@ export default function Header({ isclicked, setIsclicked }) {
   );
 }
 
+const Extra = styled.p`
+  padding: 0;
+  margin: 0;
+  width: 0px;
+  opacity: 0;
+  transition-duration: 1s;
+  /* animation: 1s ease-out 0s 1 slideInFromLeftx; */
+  /* animation-delay: 2s; */
+  /* @keyframes slideInFromLeftx { */
+  /* 0% {
+      transform: translateX(-350%);
+    }
+    25% {
+      transform: translateX(-150%);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    75% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  } */
+`;
+
 const HeaderLink = styled.a`
   color: white;
   text-decoration: none;
-  :focus {
-    padding-bottom: 10px;
-    border-bottom: 2px solid white;
+  display: inline-block;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  :after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  :hover:after {
+    width: 100%;
+    left: 0;
+  }
+`;
+
+const Name = styled.a`
+  border: none;
+  text-decoration: none;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5em;
+  padding-right: 5%;
+  transition-duration: 1s;
+  :hover {
+    p:nth-child(n) {
+      width: 50px;
+      opacity: 1;
+    }
+  }
+  animation: 1s ease-out 0s 1 slideInFromLeftx;
+  width: 50%;
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 `;
 
@@ -57,20 +131,6 @@ const TopMenu = styled.div`
   @media (max-width: 800px) {
     display: none;
   }
-`;
-
-const Name = styled.a`
-  border: none;
-  text-decoration: none;
-  padding-left: 20px;
-  display: flex;
-  align-items: center;
-  color: white;
-  cursor: pointer;
-  font-size: 1.5em;
-  padding-right: 5%;
-
-  width: 50%;
 `;
 
 const HamDiv = styled.div`
@@ -94,7 +154,7 @@ const Ham = styled.div`
   top: 0%;
   width: 100%;
   display: flex;
-  padding: 10px;
+  padding: 5px 10px;
   background: rgba(0, 0, 0, 0.92);
   justify-content: space-between;
   align-items: center;

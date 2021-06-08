@@ -3,6 +3,7 @@ import Contact from "./contact";
 import Homepage from "./Homepage";
 import Projects from "./Projects";
 import { BrowserRouter as Router } from "react-router-dom";
+import About from "./about";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
           <section id="project">
             <Projects />
           </section>
-          <section id="about">hello</section>
+          <section id="about">
+            <About />
+          </section>
           <section id="contact">
             <Contact />
           </section>

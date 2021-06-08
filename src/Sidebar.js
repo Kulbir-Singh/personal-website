@@ -30,7 +30,7 @@ const HeaderLink = styled.a`
 
 const Wrapper = styled.div`
   transform: ${(props) =>
-    props.isclicked ? "translateX(300px)" : "translateX(0)"};
+    props.isclicked ? "translateX(1000px)" : "translateX(0)"};
   position: fixed;
   transition-duration: 1s;
   top: 0;

@@ -6,6 +6,7 @@ import pic from "./resource/profile1.png";
 import P5Wrapper from "react-p5-wrapper";
 import sketch from "./sketch";
 import Boid from "./boid";
+import Water from "./resource/water.mp4";
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -115,6 +116,17 @@ const Description = styled.h1`
   min-height: 200px;
   background: white;
   border: 10px solid black;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
   @media (max-width: 800px) {
     top: -50%;
     left: 38%;
@@ -170,7 +182,7 @@ const Sideways = styled.div`
   font-size: 3.5rem;
   transition-duration: 1s;
   color: black;
-  border: 10px solid black;
+  border: 10px solid rgba(0, 0, 0, 1);
   width: 75%;
   position: relative;
   top: 40%;
@@ -188,7 +200,28 @@ const Sideways = styled.div`
       transparent 50%
     );
     /* transform: translateX(25px) translateY(255px) rotate(-90deg); */
-  } ;
+  }
+  border-image-slice: 1;
+  border-image-source: #9edaea;
+
+  /* animation: changing 15s ease infinite;
+  @keyframes changing {
+    0% {
+      border-image-source: linear-gradient(to top, #fff, #d53a9d);
+    }
+    25% {
+      border-image-source: linear-gradient(to top, #743ad5, #fff);
+    }
+    50% {
+      border-image-source: linear-gradient(to top, #fff, #d53a9d);
+    }
+    75% {
+      border-image-source: linear-gradient(to top, #fff, #d53a9d);
+    }
+    100% {
+      border-image-source: linear-gradient(to top, #743ad5, #fff);
+    }
+  } */
 `;
 
 const SkillInfo = styled.div`
@@ -212,6 +245,15 @@ const Info = styled.div`
   justify-content: center;
   height: 100%;
   width: 100%;
+  animation: 1s ease-out 0s 1 slideInFromLeftx;
+  @keyframes slideInFromLeftx {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
   @media (max-width: 800px) {
     justify-content: center;
     flex-direction: column;

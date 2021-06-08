@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import LinkedIn from "./resource/linkedin.png";
 import github from "./resource/github.svg";
+import cv from "./resource/curriculum-vitae.png";
 
 export default function Contact() {
   return (
@@ -10,15 +11,20 @@ export default function Contact() {
           Got any questions or inquiries feel free to reach out to me
           <Line></Line>
           <div>
-            <Tags>Email</Tags> kulbir2406@gmail.com
+            <Tags>Email</Tags>
             <Line></Line>
-            <Tags>LinkedIn</Tags>
-            <A
-              href="https://www.linkedin.com/in/-kulbir-singh/"
-              target="_blank"
-            >
-              linkedin.com/in/-kulbir-singh{" "}
+            <A href="https://github.com/Kulbir-Singh/portfolio/raw/main/Resume_KulbirSingh.pdf">
+              cv
             </A>
+            <Line></Line>
+            <Tags>
+              <A
+                href="https://www.linkedin.com/in/-kulbir-singh/"
+                target="_blank"
+              >
+                LinkedIn
+              </A>
+            </Tags>
             <Logo>
               <a
                 href="https://www.linkedin.com/in/-kulbir-singh/"
@@ -26,16 +32,19 @@ export default function Contact() {
               >
                 <LogoImg src={LinkedIn} />
               </a>
-
+              <a href="https://github.com/Kulbir-Singh/portfolio/raw/main/Resume_KulbirSingh.pdf">
+                <LogoImg src={cv} />
+              </a>
               <a href="https://github.com/Kulbir-Singh" target="_blank">
                 <LogoImg src={github} />
               </a>
             </Logo>
             <Line></Line>
-            <Tags>GitHub</Tags>
-            <A href="https://github.com/Kulbir-Singh" target="_blank">
-              github.com/Kulbir-Singh
-            </A>
+            <Tags>
+              <A href="https://github.com/Kulbir-Singh" target="_blank">
+                GitHub
+              </A>
+            </Tags>
             <Line></Line>
           </div>
         </div>
@@ -86,7 +95,7 @@ const Logo = styled.div`
 
 const A = styled.a`
   text-decoration: none;
-  color: black;
+  color: #15a3e6;
   @media (max-width: 800px) {
     display: none;
   }
@@ -102,7 +111,7 @@ const Tags = styled.div`
 
 const Line = styled.div`
   border: 1px solid black;
-  width: 100%;
+  margin-right: 50px;
   @media (max-width: 800px) {
     display: none;
   }

@@ -116,6 +116,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgba(28, 28, 28, 1);
+  /* background: rgba(28, 28, 28, 1); */
   align-items: center;
 `;
