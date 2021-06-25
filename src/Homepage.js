@@ -215,6 +215,7 @@ const Info = styled.div`
     margin: 10vh 2vw;
     display: flex;
     flex-direction: column;
+    height: 75vh;
     align-items: flex-start;
     justify-content: space-evenly;
   }
