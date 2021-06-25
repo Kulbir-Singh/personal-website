@@ -18,13 +18,19 @@ export default function About() {
   );
 }
 
+const Img2 = styled.img`
+  position: relative;
+  top: -100px;
+`;
+
+const Div = styled.div``;
+
 const ImgDiv = styled.div`
   min-width: 350px;
   min-height: 350px;
-  background-color: white;
-  border-radius: 50%;
-  overflow: hidden;
   margin-right: 30px;
+  display: flex;
+  justify-content: center;
   @media (max-width: 800px) {
     margin-right: 0px;
     width: 250px;
@@ -33,9 +39,30 @@ const ImgDiv = styled.div`
 `;
 
 const Img = styled.img`
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* mask-image: gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 65%,
+    transparent 100%
+  );
   position: relative;
-  top: 20px;
-  left: -20px;
+  top: 10px;
+  border-radius: 50%;
+  height: 265px;
+  width: 310px;
+  background-color: rgba(255, 255, 255, 0);
+  left: -10px;
 `;
 
 const Wrapper = styled.div`

@@ -42,15 +42,6 @@ const Wrapper = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
   overflow: hidden;
-
-  /* background: rgb(250, 250, 250);
-  background: radial-gradient(
-    circle,
-    rgba(250, 250, 250, 0) 0%,
-    rgba(113, 221, 255, 0.079653361344537785) 100%
-  ); */
-  /* background: linear-gradient(-45deg, #eeaf61, #000, #ee5d6c);*/
-
   background: linear-gradient(-45deg, #9edaea, #fff, #9effc3);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;

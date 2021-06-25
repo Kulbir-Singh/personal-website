@@ -14,7 +14,7 @@ export default function Contact() {
             <Tags>Email</Tags>
             <Line></Line>
             <A href="https://github.com/Kulbir-Singh/portfolio/raw/main/Resume_KulbirSingh.pdf">
-              cv
+              Resume
             </A>
             <Line></Line>
             <Tags>

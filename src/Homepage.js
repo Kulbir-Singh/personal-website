@@ -67,15 +67,20 @@ function Homepage() {
   useInterval(() => {
     setWordlength(0);
   }, 4000);
+
   return (
     <Div>
       <Header isclicked={isclicked} setIsclicked={setIsclicked} />
       <Info>
         <Sidebar isclicked={isclicked} setIsclicked={setIsclicked} />
         <PersonalInfo>
-          {/* <div>Kulbir Singh</div> */}
-          <Sideways>Full Stack Web Developer</Sideways>
+          Hello, I'm Kulbir{" "}
+          <Sideways>
+            Full Stack
+            <br /> Web Developer
+          </Sideways>
         </PersonalInfo>
+        <Description></Description>
         <SkillInfo>
           Skill Set:
           <GeneratedTxt>
@@ -95,63 +100,46 @@ function Homepage() {
             })}
           </Skills>
         </SkillInfo>
-      </Info>{" "}
-      <Description>
-        I specialize in Web Developing. Experienced on both front-end and
-        back-end
-      </Description>
+        <Resume href="https://github.com/Kulbir-Singh/portfolio/raw/main/Resume_KulbirSingh.pdf">
+          Resume
+        </Resume>
+        <Resume href="https://github.com/Kulbir-Singh/portfolio/raw/main/Resume_KulbirSingh.pdf">
+          Contact me
+        </Resume>
+      </Info>
     </Div>
   );
 }
 
-const Description = styled.h1`
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 5px;
-  justify-content: center;
-  top: -35%;
-  left: 30%;
-  width: 60%;
-  min-height: 200px;
+const Resume = styled.a`
+  text-decoration: none;
+  color: #15a3e6;
+  padding: 10px;
+  border-radius: 20px;
+  margin-right: 20px;
   background: white;
-  border: 10px solid black;
+  opacity: 0.65;
+  :hover {
+    opacity: 1;
+  }
+  box-shadow: 0 0 20px -15px;
+`;
+
+const Description = styled.h1`
   animation: 1s ease-out 0s 1 slideInFromLeft;
   @keyframes slideInFromLeft {
     0% {
-      transform: translateY(200%);
+      transform: translateX(200%);
       opacity: 0;
     }
     100% {
-      transform: translateY(0);
+      transform: translateX(0);
       opacity: 1;
     }
   }
-  @media (max-width: 800px) {
-    top: -50%;
-    left: 38%;
-    width: 50%;
-  }
-`;
-
-const Img = styled.img`
-  position: relative;
-  top: -75%;
-  right: -55%;
-  /* border: 2px solid #00000010; */
-  object-fit: cover;
-  /* z-index: -1; */
-  height: 40%;
-  /* box-shadow: 0px 0px 20px #00000010; */
-  @media (max-width: 1000px) {
-    right: -51%;
-    top: -76%;
+  @media (max-width: 1300px) {
   }
   @media (max-width: 800px) {
-    width: 50%;
-    top: -35%;
-    right: -50%;
-    display: none;
   }
 `;
 
@@ -162,89 +150,40 @@ const Skills = styled.div`
 `;
 
 const PersonalInfo = styled.div`
-  /* mix-blend-mode: difference; */
+  font-size: 2rem;
+  color: #15a3e6;
+  padding: 0px;
+  margin: 0px;
+  padding-top: 7%;
   @media (max-width: 800px) {
+    font-size: 2rem;
+    padding-top: 20px;
   }
-  font-size: 2.5rem;
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  div:nth-child(1) {
-    color: black;
-    font-weight: lighter;
-  }
 `;
 
 const Sideways = styled.div`
-  /* text-orientation: sideways; */
-  /* transform-origin: 0 0; */
   font-size: 3.5rem;
-  transition-duration: 1s;
   color: black;
-  border: 10px solid rgba(0, 0, 0, 1);
-  width: 75%;
-  position: relative;
-  top: 40%;
-  height: 500px;
-  /* transform: translateX(45%) translateY(115%); */
+  font-weight: 1000;
+  font-family: "Poppins", sans-serif;
+  margin: none;
+  padding: none;
+  text-transform: uppercase;
   @media (max-width: 1300px) {
-    /* transform: translateX(15px) translateY(290px) ; */
   }
   @media (max-width: 800px) {
-    top: 20%;
-    background: linear-gradient(
-      45deg,
-      #c5f1fc 50%,
-      #f0fff6 50%,
-      transparent 50%
-    );
-    /* transform: translateX(25px) translateY(255px) rotate(-90deg); */
+    font-size: 3rem;
+    font-weight: bolder;
   }
-  border-image-slice: 1;
-  border-image-source: #9edaea;
-
-  /* animation: changing 15s ease infinite;
-  @keyframes changing {
-    0% {
-      border-image-source: linear-gradient(to top, #fff, #d53a9d);
-    }
-    25% {
-      border-image-source: linear-gradient(to top, #743ad5, #fff);
-    }
-    50% {
-      border-image-source: linear-gradient(to top, #fff, #d53a9d);
-    }
-    75% {
-      border-image-source: linear-gradient(to top, #fff, #d53a9d);
-    }
-    100% {
-      border-image-source: linear-gradient(to top, #743ad5, #fff);
-    }
-  } */
 `;
 
 const SkillInfo = styled.div`
   width: 73%;
-  /* padding-top: 180px; */
-  /* position: relative; */
-  /* top: -50px;
-  left: -10px; */
-  position: relative;
-  top: -23%;
-  height: 100%;
+  height: 22vh;
   @media (max-width: 800px) {
     top: -25%;
   }
-`;
-
-const Info = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
   animation: 1s ease-out 0s 1 slideInFromLeftx;
   @keyframes slideInFromLeftx {
     0% {
@@ -260,26 +199,41 @@ const Info = styled.div`
   } ;
 `;
 
+const Info = styled.div`
+  border-radius: 20px;
+  height: 80vh;
+  width: 90vw;
+  padding: 0 2.5vw 0 5vw;
+  margin: 10vh 5vw;
+  box-shadow: 0 0 20px -15px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(158, 218, 234, 0.5),
+    rgba(158, 255, 195, 0.1)
+  );
+  @media (max-width: 800px) {
+    margin: 10vh 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  /* backdrop-filter: blur(2rem); */
+`;
+
 const GeneratedTxt = styled.div`
   color: black;
   font-size: 3rem;
 `;
 
 const Div = styled.div`
-  /* border: 2px solid black; */
+  display: flex;
   margin: none;
   color: black;
   padding: none;
   height: 100vh;
-  /* margin: 10px 0px; */
   width: 100%;
-  /* background: rgb(255, 113, 150);
-  background: linear-gradient(
-    270deg,
-    rgba(250, 250, 250, 0.12088585434173671) 0%,
-    rgba(113, 221, 255, 0.14889705882352944) 63%
-  ); */
-  /* background-color: transparent; */
+  font-family: "Poppins", sans-serif;
 `;
 
 export default Homepage;

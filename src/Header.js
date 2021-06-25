@@ -155,7 +155,7 @@ const Ham = styled.div`
   width: 100%;
   display: flex;
   padding: 5px 10px;
-  background: rgba(0, 0, 0, 0.92);
+  background: rgba(0, 0, 0, 0.81);
   justify-content: space-between;
   align-items: center;
   transition-duration: 1s;
