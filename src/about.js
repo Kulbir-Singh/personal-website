@@ -12,7 +12,7 @@ export default function About() {
         I am an active learner who has completed an intensive Full Stack Web
         Development program from Concordia University. With an attention to
         detail, creativity and intuition, I am able to contribute to a dynamic
-        workspace.
+        workspace..
       </p>
     </Wrapper>
   );

@@ -4,7 +4,6 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import pic from "./resource/profile1.png";
 import P5Wrapper from "react-p5-wrapper";
-import sketch from "./sketch";
 import Boid from "./boid";
 import Water from "./resource/water.mp4";
 
@@ -38,7 +37,6 @@ function Homepage() {
   useInterval(() => {
     setCurrentChar(charac[Math.floor(Math.random() * charac.length)]);
   }, 50);
-  console.log(window.location.pathname);
 
   const totalInterval = phrases.length * 4000;
 
@@ -219,7 +217,6 @@ const Info = styled.div`
     align-items: flex-start;
     justify-content: space-evenly;
   }
-  /* backdrop-filter: blur(2rem); */
 `;
 
 const GeneratedTxt = styled.div`

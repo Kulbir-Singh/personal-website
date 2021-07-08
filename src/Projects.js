@@ -1,45 +1,147 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 import Finance from "./resource/financelogin.PNG";
 
 export default function Projects() {
+  useEffect(() => {
+    document.getElementById("box").addEventListener("onblur", myFunction);
+    function myFunction() {
+      document.getElementById("box").style.color = "red";
+    }
+  }, []);
+
   return (
     <Wrapper>
       <Project>
+        <h1>Finance Network</h1>
         <div>
           <FinanceImg src={Finance} />
         </div>
-        <div>
-          <strong>Description:</strong>The website is built for users that want
+        <Text>
+          <strong>Description: </strong>The website is built for users that want
           to learn or share their ideas related to the finance industry. With
           features such as being able to follow a user, to share and bookmark
           articles, you're able to create connections with others that share
           similar interest as yours.
-          <FinanceLink href="https://github.com/Kulbir-Singh/Finance-Website">
-            Github
-          </FinanceLink>
-          <FinanceLink href="https://github.com/Kulbir-Singh/Finance-Website">
-            Youtube
-          </FinanceLink>
-          <p>
-            <strong>Technologies:</strong>
-            <br />
-            React, Redux, Firebase, Node.js, Html, CSS, Mongodb
-          </p>
-        </div>
+        </Text>
+        <FinanceLink href="https://github.com/Kulbir-Singh/Finance-Website">
+          Github
+        </FinanceLink>
+        <FinanceLink href="https://github.com/Kulbir-Singh/Finance-Website">
+          Youtube
+        </FinanceLink>
+        <Text>
+          {" "}
+          <strong>Technologies:</strong>
+          <br />
+          React, Redux, Firebase, Node.js, Html, CSS, Mongodb
+        </Text>
       </Project>
+      <SubProjects>
+        <Project1
+          id="box"
+          onClick={() => {
+            let textbox = document.getElementById("box");
+            textbox.style.height =
+              textbox.style.height == "80vh" ? "10vh" : "80vh";
+            document.getElementById("box1").style.height =
+              document.getElementById("box1").style.height == "10vh"
+                ? "80vh"
+                : "10vh";
+            if (document.getElementById("box1")?.style.height >= "70vh") {
+              document.getElementById("arrow").style.display = "";
+              document.getElementById("arrow1").style.display = "none";
+            }
+            if (document.getElementById("box1")?.style.height == "10vh") {
+              document.getElementById("arrow").style.display = "none";
+              document.getElementById("arrow1").style.display = "";
+            }
+          }}
+        >
+          <Div id="arrow">^</Div>
+        </Project1>
+        <Project2
+          id="box1"
+          onClick={() => {
+            let textbox = document.getElementById("box1");
+            if (document.getElementById("box1")?.style.height >= "70vh") {
+              document.getElementById("arrow").style.display = "none";
+              document.getElementById("arrow1").style.display = "";
+            }
+            if (document.getElementById("box1")?.style.height == "10vh") {
+              document.getElementById("arrow").style.display = "";
+              document.getElementById("arrow1").style.display = "none";
+            }
+            textbox.style.height =
+              textbox.style.height == "80vh" ? "10vh" : "80vh";
+            document.getElementById("box").style.height =
+              document.getElementById("box").style.height == "10vh"
+                ? "80vh"
+                : "10vh";
+          }}
+        >
+          <Div id="arrow1">^</Div>
+        </Project2>
+      </SubProjects>
     </Wrapper>
   );
 }
 
+const Div = styled.div``;
+
+const SubProjects = styled.div`
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const Project1 = styled.div`
+  transition-duration: 1s;
+  border-radius: 20px;
+  display: flex;
+  margin-top: 10vh;
+  align-items: center;
+  justify-content: center;
+  width: 43vw;
+  background-color: rgba(255, 255, 255, 0.81);
+  height: 35vh;
+  @media (max-width: 800px) {
+    margin-top: 5vh;
+    min-height: 40vh;
+    width: 85vw;
+  }
+`;
+
+const Project2 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgba(255, 255, 255, 0.81);
+  margin-top: 10px;
+  transition-duration: 1s;
+  border-radius: 20px;
+  width: 43vw;
+  height: 35vh;
+  @media (max-width: 800px) {
+    margin-top: 5vh;
+    min-height: 40vh;
+    width: 85vw;
+  }
+`;
+
+const Text = styled.div`
+  width: 80%;
+`;
+
 const FinanceLink = styled.a`
-  color: white;
+  color: black;
 `;
 
 const FinanceImg = styled.img`
-  width: 40vw;
+  width: 90%;
   height: 100%;
-  position: relative;
-  right: 25%;
+  margin-left: 5%;
   object-fit: cover;
   transition-duration: 1s;
   @media (max-width: 800px) {
@@ -49,73 +151,36 @@ const FinanceImg = styled.img`
     box-shadow: 8px 0px 16px 3px rgba(0, 0, 0, 0);
     right: 0;
   }
-  /* -webkit-box-shadow: 8px 0px 16px 3px rgba(0, 0, 0, 0.66);
-  box-shadow: 8px 0px 16px 3px rgba(0, 0, 0, 0.66); */
   box-shadow: 0px 0px 20px #00000010;
 `;
 
 const Project = styled.div`
-  width: 70%;
-  height: 70%;
-  margin-left: 100px;
+  width: 40vw;
+  height: 80vh;
+  border-radius: 20px;
   display: flex;
-  background-color: white;
+  transition-duration: 1s;
+  flex-direction: column;
+  margin: 0 5vw;
+  margin-top: 10vh;
+  background-color: rgba(255, 255, 255, 0.81);
   align-items: center;
-  justify-content: center;
-  border: 2px solid #00000010;
-  /* box-shadow: 0px 10px 20px lightsteelblue; */
-  /* border: 20px sold white; */
+  justify-content: space-around;
   @media (max-width: 800px) {
-    margin-top: 0%;
     margin-left: 0px;
     height: 65%;
-    width: 85%;
-  }
-  div:nth-child(2) {
-    height: 100%;
-    color: black;
-    font-size: 1.5rem;
-    margin: 0 20px;
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    /* line-height: 2.75vw; */
-    @media (max-width: 1200px) {
-      font-size: 2vw;
-    }
-    @media (max-width: 800px) {
-      height: 50%;
-      width: 100%;
-      font-size: 0.9rem;
-    }
-  }
-
-  div:nth-child(1) {
-    height: 90%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* overflow: hidden; */
-    transition-duration: 1s;
-    @media (max-width: 800px) {
-      height: 50%;
-      width: 100%;
-    }
-  }
-  @media (max-width: 800px) {
-    flex-direction: column;
-    /* overflow: hidden; */
   }
 `;
 
 const Wrapper = styled.div`
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+  /* flex-direction: column;
   justify-content: center;
-  /* background: rgba(28, 28, 28, 1); */
+  align-items: center; */
   align-items: center;
 `;
