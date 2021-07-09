@@ -135,6 +135,7 @@ const FormContainer = styled.div`
   width: 65%;
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   align-items: center;
   @media (max-width: 800px) {
@@ -150,6 +151,8 @@ const Form = styled.form`
   color: black;
   box-shadow: 0px 10px 20px lightsteelblue;
   border-radius: 2px;
+  border-radius: 20px;
+  overflow: hidden;
   width: 30vw;
   height: 50%;
   flex-direction: column;

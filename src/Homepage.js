@@ -101,9 +101,7 @@ function Homepage() {
         <Resume href="https://github.com/Kulbir-Singh/portfolio/raw/main/Resume_KulbirSingh.pdf">
           Resume
         </Resume>
-        <Resume href="https://github.com/Kulbir-Singh/portfolio/raw/main/Resume_KulbirSingh.pdf">
-          Contact me
-        </Resume>
+        <Resume href="#contact">Contact me</Resume>
       </Info>
     </Div>
   );
