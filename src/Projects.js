@@ -82,13 +82,13 @@ export default function Projects() {
               Description:
               <br /> <br />
             </strong>
-            The website is built for users that want to learn or share their
-            ideas related to the finance industry. With features such as being
-            able to follow a user, to share and bookmark articles, you're able
-            to create connections with others that share similar interest as
-            yours.
+            To Build a website to have a network of users connecting to each
+            other. With the login feature you are able to see who is connected
+            to who and add new connections.This is a website for bikini bottom
+            residences. Sign In to see who’s connected to who and build new
+            connections.
           </Text>
-          <FinanceLink href="https://github.com/Kulbir-Singh/Finance-Website">
+          <FinanceLink href="https://github.com/Kulbir-Singh/BikiniBottom-Network">
             Github
           </FinanceLink>
           <FinanceLink href="https://github.com/Kulbir-Singh/Finance-Website">
@@ -99,7 +99,7 @@ export default function Projects() {
             <strong>Technologies:</strong>
             <br />
             <br />
-            React, Redux, Firebase, Node.js, Html, CSS, Mongodb
+            React, Javascript, Html, CSS
           </Text>
         </Project1>
         <Project2>
@@ -112,13 +112,15 @@ export default function Projects() {
               Description:
               <br /> <br />
             </strong>
-            The website is built for users that want to learn or share their
-            ideas related to the finance industry. With features such as being
-            able to follow a user, to share and bookmark articles, you're able
-            to create connections with others that share similar interest as
-            yours.
+            An ecommerce website where you can find all types of wearables.
+            Description: A one stop shop for all your wearable needs. This
+            project focuses on building an e-commerce website that is user
+            friendly. With features such as a filtering system, category, and a
+            search bar users can easily find the products they're looking for. A
+            cart and checkout modal helps the user to complete their purchases
+            in a 2 step process.
           </Text>
-          <FinanceLink href="https://github.com/Kulbir-Singh/Finance-Website">
+          <FinanceLink href="https://github.com/Kulbir-Singh/E-commerce-project">
             Github
           </FinanceLink>
           <FinanceLink href="https://github.com/Kulbir-Singh/Finance-Website">
@@ -129,7 +131,7 @@ export default function Projects() {
             <strong>Technologies:</strong>
             <br />
             <br />
-            React, Redux, Firebase, Node.js, Html, CSS, Mongodb
+            React, Redux, Node.js, Html, CSS
           </Text>
         </Project2>
       </Ul>
