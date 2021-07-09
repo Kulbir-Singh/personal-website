@@ -116,9 +116,7 @@ export default function Projects() {
             Description: A one stop shop for all your wearable needs. This
             project focuses on building an e-commerce website that is user
             friendly. With features such as a filtering system, category, and a
-            search bar users can easily find the products they're looking for. A
-            cart and checkout modal helps the user to complete their purchases
-            in a 2 step process.
+            search bar.
           </Text>
           <FinanceLink href="https://github.com/Kulbir-Singh/E-commerce-project">
             Github
@@ -184,8 +182,8 @@ const Project1 = styled.ol`
   background-color: rgba(255, 255, 255, 0.81);
   justify-content: space-around;
   @media (max-width: 800px) {
-    width: 95vw;
-    height: 65%;
+    width: 70vw;
+    height: 85%;
   }
 `;
 
@@ -200,8 +198,8 @@ const Project2 = styled.ol`
 
   justify-content: space-around;
   @media (max-width: 800px) {
-    width: 95vw;
-    height: 65%;
+    width: 70vw;
+    height: 85%;
   }
 `;
 
@@ -231,7 +229,7 @@ const FinanceImg = styled.img`
 const Ul = styled.ul`
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(10, 40vw);
+  grid-template-columns: repeat(3, 40vw);
   grid-template-rows: 1fr;
   grid-column-gap: 10rem;
   grid-row-gap: 1rem;
@@ -257,8 +255,8 @@ const Project = styled.ol`
   background-color: rgba(255, 255, 255, 0.81);
   justify-content: space-around;
   @media (max-width: 800px) {
-    width: 95vw;
-    height: 65%;
+    width: 70vw;
+    height: 85%;
   }
 `;
 
