@@ -34,7 +34,12 @@ const Info = styled.div`
     line-height: 70px;
   }
   @media (max-width: 800px) {
-    flex-direction: column;
+    flex-direction: row;
+    p:nth-child(n) {
+      font-size: 10px;
+      padding-right: 10px;
+      line-height: 7em;
+    }
   }
 `;
 

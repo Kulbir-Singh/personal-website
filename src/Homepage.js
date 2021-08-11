@@ -5,7 +5,8 @@ import Sidebar from "./Sidebar";
 import pic from "./resource/profile1.png";
 import P5Wrapper from "react-p5-wrapper";
 import Boid from "./boid";
-import Water from "./resource/water.mp4";
+import Banner from "./resource/homepageBanner.png";
+import Profile from "./resource/profilepic.png";
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -68,11 +69,19 @@ function Homepage() {
 
   return (
     <Div>
+      {" "}
+      <Img2 src={Profile} />
+      <Img src={Banner} />
       <Header isclicked={isclicked} setIsclicked={setIsclicked} />
       <Info>
         <Sidebar isclicked={isclicked} setIsclicked={setIsclicked} />
         <PersonalInfo>
-          Hello, I'm Kulbir{" "}
+          Hello, I'm Kulbir
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           <Sideways>
             Full Stack
             <br /> Web Developer
@@ -107,13 +116,26 @@ function Homepage() {
   );
 }
 
+const Img2 = styled.img`
+  position: absolute;
+  z-index: 1;
+  width: 300px;
+  top: 10%;
+  right: 10%;
+  @media (max-width: 800px) {
+    width: 30vw;
+    position: absolute;
+    top: 8%;
+    right: 8%;
+  }
+`;
+
 const Resume = styled.a`
   text-decoration: none;
-  color: #15a3e6;
+  color: black;
   padding: 10px;
   border-radius: 20px;
   margin-right: 20px;
-  background: white;
   opacity: 0.65;
   :hover {
     opacity: 1;
@@ -146,13 +168,13 @@ const Skills = styled.div`
 `;
 
 const PersonalInfo = styled.div`
-  font-size: 2rem;
-  color: #15a3e6;
+  font-size: 3rem;
+  color: #ffc815;
   padding: 0px;
   margin: 0px;
   padding-top: 7%;
   @media (max-width: 800px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-top: 20px;
   }
   width: 100%;
@@ -177,9 +199,6 @@ const Sideways = styled.div`
 const SkillInfo = styled.div`
   width: 73%;
   height: 22vh;
-  @media (max-width: 800px) {
-    top: -25%;
-  }
   animation: 1s ease-out 0s 1 slideInFromLeftx;
   @keyframes slideInFromLeftx {
     0% {
@@ -190,30 +209,35 @@ const SkillInfo = styled.div`
     }
   }
   @media (max-width: 800px) {
+    top: -25%;
     justify-content: center;
     flex-direction: column;
   } ;
 `;
 
-const Info = styled.div`
-  border-radius: 20px;
-  height: 80vh;
-  width: 90vw;
-  padding: 0 2.5vw 0 5vw;
-  margin: 10vh 5vw;
-  box-shadow: 0 0 20px -15px;
-  background: linear-gradient(
-    to right bottom,
-    rgba(158, 218, 234, 0.5),
-    rgba(158, 255, 195, 0.1)
-  );
+const Img = styled.img`
+  width: 100vw;
+  position: relative;
+  top: -40px;
+  height: 85vh;
   @media (max-width: 800px) {
-    margin: 10vh 2vw;
-    display: flex;
-    flex-direction: column;
-    height: 75vh;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    height: 50vh;
+  }
+`;
+
+const Info = styled.div`
+  height: 80vh;
+  width: 98.75vw;
+  position: relative;
+  top: -78vh;
+  left: 10%;
+  @media (max-width: 800px) {
+    top: -37vh;
+    left: 8%;
+  }
+  @media (max-height: 750px) {
+    top: -40vh;
+    left: 8%;
   }
 `;
 
@@ -225,8 +249,11 @@ const GeneratedTxt = styled.div`
 const Div = styled.div`
   display: flex;
   margin: none;
+  flex-direction: column;
   color: black;
   padding: none;
+  position: relative;
+  overflow: hidden;
   height: 100vh;
   width: 100%;
   font-family: "Poppins", sans-serif;

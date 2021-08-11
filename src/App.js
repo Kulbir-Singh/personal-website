@@ -4,6 +4,7 @@ import Homepage from "./Homepage";
 import Projects from "./Projects";
 import { BrowserRouter as Router } from "react-router-dom";
 import About from "./about";
+import AboutMe from "./AboutMe";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
             <Projects />
           </section>
           <section id="about">
-            <About />
+            <AboutMe />
           </section>
           <section id="contact">
             <Contact />
@@ -42,7 +43,8 @@ const Wrapper = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(-45deg, #9edaea, #fff, #9effc3);
+  /* background: #f5f3ef;
+  
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   @keyframes gradient {
@@ -61,7 +63,7 @@ const Wrapper = styled.div`
     100% {
       background-position: 0% 50%;
     }
-  }
+  } */
 `;
 
 export default App;

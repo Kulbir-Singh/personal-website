@@ -4,13 +4,19 @@ export default function Sidebar({ isclicked, setIsclicked }) {
   return (
     <Wrapper isclicked={isclicked}>
       <div>
-        <HeaderLink href="#project">Projects</HeaderLink>
+        <HeaderLink href="#project" onClick={() => setIsclicked(!isclicked)}>
+          Projects
+        </HeaderLink>
       </div>
       <div>
-        <HeaderLink href="#about">About me</HeaderLink>
+        <HeaderLink href="#about" onClick={() => setIsclicked(!isclicked)}>
+          About me
+        </HeaderLink>
       </div>
       <div>
-        <HeaderLink href="#contact">Contact</HeaderLink>
+        <HeaderLink href="#contact" onClick={() => setIsclicked(!isclicked)}>
+          Contact
+        </HeaderLink>
       </div>
     </Wrapper>
   );

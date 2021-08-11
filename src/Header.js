@@ -126,8 +126,9 @@ const SubHeader = styled.div`
 `;
 
 const TopMenu = styled.div`
-  width: 50%;
+  width: 30%;
   display: flex;
+  padding-right: 8%;
   @media (max-width: 800px) {
     display: none;
   }
@@ -144,27 +145,30 @@ const HamDiv = styled.div`
   align-items: flex-end;
   @media (max-width: 800px) {
     display: flex;
+    z-index: 20;
     padding: 10px;
-    padding-right: 20px;
+    padding-right: 30px;
   }
 `;
 
 const Ham = styled.div`
   position: fixed;
   top: 0%;
-  width: 100%;
+  width: 91vw;
   display: flex;
-  padding: 5px 10px;
-  background: rgba(0, 0, 0, 0.81);
+  padding: 5px 9vw;
+  background: rgba(0, 0, 0);
   justify-content: space-between;
   align-items: center;
   transition-duration: 1s;
   @media (max-width: 800px) {
     display: flex;
+    width: 100vw;
+    padding: 5px 10px;
     justify-content: flex-end;
   }
   /* display: none; */
-  z-index: 10;
+  z-index: 20;
 `;
 
 const Ham1 = styled.div`

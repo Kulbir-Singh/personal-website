@@ -182,7 +182,7 @@ const Project1 = styled.ol`
   background-color: rgba(255, 255, 255, 0.81);
   justify-content: space-around;
   @media (max-width: 800px) {
-    width: 70vw;
+    width: 65vw;
     height: 85%;
   }
 `;
@@ -198,7 +198,7 @@ const Project2 = styled.ol`
 
   justify-content: space-around;
   @media (max-width: 800px) {
-    width: 70vw;
+    width: 65vw;
     height: 85%;
   }
 `;
@@ -243,6 +243,8 @@ const Ul = styled.ul`
   padding-left: 5vw;
   padding-right: 5vw;
   scroll-padding: 1rem;
+  @media (min-width: 800px) {
+  }
 `;
 
 const Project = styled.ol`
@@ -255,7 +257,7 @@ const Project = styled.ol`
   background-color: rgba(255, 255, 255, 0.81);
   justify-content: space-around;
   @media (max-width: 800px) {
-    width: 70vw;
+    width: 65vw;
     height: 85%;
   }
 `;
@@ -263,6 +265,7 @@ const Project = styled.ol`
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
+  cursor: pointer;
   :active {
     cursor: grab;
   }

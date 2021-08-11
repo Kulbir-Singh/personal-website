@@ -8,7 +8,7 @@ export default function Contact() {
     <Wrapper>
       <PersonalInfo>
         <div>
-          Got any questions or inquiries feel free to reach out to me
+          IF YOU HAVE ANY QUESTIONS FEEL FREE TO <H1>GET IN TOUCH</H1>
           <Line></Line>
           <div>
             <Tags>Email</Tags>
@@ -79,6 +79,8 @@ export default function Contact() {
   );
 }
 
+const H1 = styled.h2``;
+
 const LogoImg = styled.img`
   height: 2em;
 `;
@@ -146,11 +148,10 @@ const FormContainer = styled.div`
 `;
 
 const Form = styled.form`
-  border: 2px solid #00000010;
+  border: 10px solid #ffd650;
   background-color: white;
   color: black;
-  box-shadow: 0px 10px 20px lightsteelblue;
-  border-radius: 2px;
+  /* box-shadow: 0px 10px 20px lightsteelblue; */
   border-radius: 20px;
   overflow: hidden;
   width: 30vw;
@@ -184,10 +185,10 @@ const Button = styled.button`
   min-width: 100px;
   display: block;
   border: 2px solid #00000010;
-  background-color: #15a3e6;
+  background-color: #ffd650;
   font-weight: bold;
-  color: white;
-  border-radius: 2px;
+  color: black;
+  border-radius: 10px;
 `;
 
 const PersonalInfo = styled.div`
@@ -228,7 +229,13 @@ const Textarea = styled.textarea`
 
 const Wrapper = styled.div`
   display: flex;
-  /* background-color: #f9f9fb; */
+  background-color: #ffeba7;
+  background: repeating-linear-gradient(
+    #ffeba7,
+    #ffeba7 49.9%,
+    #000 50.1%,
+    #000 100%
+  );
   color: black;
   height: 100vh;
   font-size: 18px;
