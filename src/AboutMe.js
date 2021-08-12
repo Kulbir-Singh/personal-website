@@ -25,7 +25,7 @@ const H2 = styled.h2`
 const Text = styled.div`
   color: grey;
   position: relative;
-  width: 40vw;
+  width: 39vw;
   top: 60%;
   line-height: 25px;
   right: -50%;
@@ -44,10 +44,10 @@ const Img2 = styled.img`
 `;
 
 const Img = styled.img`
-  width: 45vw;
+  width: 35vw;
   position: relative;
-  top: -80vh;
-  left: 0px;
+  top: -75vh;
+  left: 50px;
   @media (max-width: 800px) {
     width: 50vw;
     position: relative;

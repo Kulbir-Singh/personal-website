@@ -5,6 +5,7 @@ import Projects from "./Projects";
 import { BrowserRouter as Router } from "react-router-dom";
 import About from "./about";
 import AboutMe from "./AboutMe";
+import Project from "./Project";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
             <Homepage />
           </section>{" "}
           <section id="project">
-            <Projects />
+            <Project />
           </section>
           <section id="about">
             <AboutMe />
@@ -32,6 +33,7 @@ function App() {
 const Container = styled.div`
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
   section:nth-child(n) {

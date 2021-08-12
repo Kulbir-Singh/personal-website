@@ -134,13 +134,14 @@ const Resume = styled.a`
   text-decoration: none;
   color: black;
   padding: 10px;
+  background-color: white;
   border-radius: 20px;
   margin-right: 20px;
   opacity: 0.65;
   :hover {
     opacity: 1;
   }
-  box-shadow: 0 0 20px -15px;
+  box-shadow: 0 0 25px -10px;
 `;
 
 const Description = styled.h1`

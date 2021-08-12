@@ -102,6 +102,7 @@ export default function Projects() {
             React, Javascript, Html, CSS
           </Text>
         </Project1>
+
         <Project2>
           <h1>E-Commerce</h1>
           <div>

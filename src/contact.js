@@ -9,14 +9,11 @@ export default function Contact() {
       <PersonalInfo>
         <div>
           IF YOU HAVE ANY QUESTIONS FEEL FREE TO <H1>GET IN TOUCH</H1>
-          <Line></Line>
           <div>
-            <Tags>Email</Tags>
-            <Line></Line>
+            {/* <Tags>Email</Tags>
             <A href="https://github.com/Kulbir-Singh/portfolio/raw/main/Resume_KulbirSingh.pdf">
               Resume
-            </A>
-            <Line></Line>
+            </A> */}
             <Tags>
               <A
                 href="https://www.linkedin.com/in/-kulbir-singh/"
@@ -39,13 +36,12 @@ export default function Contact() {
                 <LogoImg src={github} />
               </a>
             </Logo>
-            <Line></Line>
+
             <Tags>
               <A href="https://github.com/Kulbir-Singh" target="_blank">
                 GitHub
               </A>
             </Tags>
-            <Line></Line>
           </div>
         </div>
       </PersonalInfo>
@@ -79,7 +75,14 @@ export default function Contact() {
   );
 }
 
-const H1 = styled.h2``;
+const H1 = styled.h1`
+  font-size: 50px;
+  font-weight: bolder;
+  margin: 0;
+  @media (max-width: 800px) {
+    font-size: 35px;
+  }
+`;
 
 const LogoImg = styled.img`
   height: 2em;
@@ -97,14 +100,14 @@ const Logo = styled.div`
 
 const A = styled.a`
   text-decoration: none;
-  color: #15a3e6;
+  color: #ffc815;
   @media (max-width: 800px) {
     display: none;
   }
 `;
 
 const Tags = styled.div`
-  color: #15a3e6;
+  color: #000;
   font-weight: bold;
   @media (max-width: 800px) {
     display: none;
@@ -137,13 +140,15 @@ const FormContainer = styled.div`
   width: 65%;
   display: flex;
   flex-direction: column;
-
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  margin-right: 9.5vw;
   @media (max-width: 800px) {
     width: 100%;
     height: 60%;
     padding-bottom: 5%;
+    align-items: center;
+    margin-right: 0vw;
   }
 `;
 
@@ -151,6 +156,7 @@ const Form = styled.form`
   border: 10px solid #ffd650;
   background-color: white;
   color: black;
+
   /* box-shadow: 0px 10px 20px lightsteelblue; */
   border-radius: 20px;
   overflow: hidden;
@@ -171,7 +177,7 @@ const Form = styled.form`
     height: 100%;
     width: 75%;
     div:nth-child(n) {
-      font-size: 12px;
+      font-size: 1rem;
     }
   }
 `;
@@ -192,27 +198,26 @@ const Button = styled.button`
 `;
 
 const PersonalInfo = styled.div`
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
-  padding: 0 5%;
+  font-size: 1.2rem;
+  margin-left: 10%;
   font-weight: bold;
   div:nth-child(n) {
     width: 100%;
     margin: 20px 0;
   }
   @media (max-width: 800px) {
-    width: 90%;
-    font-size: 15px;
-    padding: 0 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 0%;
     padding-top: 15%;
-    div:nth-child(n) {
-      width: 100%;
-      margin: 10px 0;
-    }
+    margin-left: 0%;
+    margin-bottom: 0;
   }
 `;
 
