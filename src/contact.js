@@ -76,11 +76,15 @@ export default function Contact() {
 }
 
 const H1 = styled.h1`
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: bolder;
   margin: 0;
+
+  @media (max-width: 1200px) {
+    font-size: 2.7rem;
+  }
   @media (max-width: 800px) {
-    font-size: 35px;
+    font-size: 2.5rem;
   }
 `;
 

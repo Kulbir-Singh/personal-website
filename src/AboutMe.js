@@ -45,9 +45,10 @@ const Img2 = styled.img`
 
 const Img = styled.img`
   width: 35vw;
+
   position: relative;
   top: -75vh;
-  left: 50px;
+  left: 6%;
   @media (max-width: 800px) {
     width: 50vw;
     position: relative;
