@@ -5,7 +5,7 @@ export default function Credentials() {
 
   return (
     <div
-      className="px-12 lg:px-0 flex flex-col w-full h-full items-center text-white/80 bg-white/[.05] lg:absolute lg:opacity-0 duration-1000 justify-center"
+      className="px-12 lg:px-0 flex flex-col w-full h-full items-center text-white/80 bg-white/[.05] lg:absolute lg:opacity-0 duration-1000 justify-center py-40 -translate-y-[235px] lg:translate-y-0"
       id="section2"
     >
       <div className="w-full text-center">

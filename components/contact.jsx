@@ -13,7 +13,7 @@ export default function Contact() {
         <span className="relative sm:left-24">Touch</span>
       </p>
       <div className="w-full h-fit py-12 px-6 sm:px-12 bg-black/70 max-w-[900px] rounded-md z-20">
-        <p className="text-5xl font-semibold">Get in Touch</p>
+        <p className="text-5xl fon">Get in Touch</p>
         <form
           action="https://api.web3forms.com/submit"
           method="POST"
@@ -63,27 +63,6 @@ export default function Contact() {
           async
           defer
         ></Script>
-
-        {/* <div className="h-full w-full flex flex-col justify-end items-end space-y-24">
-          <div className="space-y-24 w-full max-w-[600px]">
-            <input
-              className="border-b-2 bg-transparent max-w-[600px] w-full h-12 text-xl placeholder:text-white/50 placeholder:text-4xl placeholder:font-serif outline-none"
-              placeholder="Email"
-            />
-            <input
-              className="border-b-2 bg-transparent max-w-[600px] w-full h-12 text-xl placeholder:text-white/50 placeholder:text-4xl placeholder:font-serif outline-none"
-              placeholder="Name"
-            />
-            <textarea
-              className="border-b-2 resize-none bg-transparent max-w-[600px] w-full text-xl placeholder:text-white/50 placeholder:text-4xl placeholder:font-serif outline-none"
-              placeholder="Message"
-              rows={7}
-            ></textarea>
-            <button className="px-20 z-20 py-3 w-full max-w-[450px] text-xl bg-blue-600 rounded-md my-5 text-white/80 font-semibold">
-              <p className="cursor-pointer">Submit</p>
-            </button>
-          </div>
-        </div> */}
       </div>
     </div>
   );

@@ -28,27 +28,29 @@ export default function Home() {
       </Head>
 
       <main className="w-full h-full bg-custom-black relative z-0 flex flex-col">
-        <PageTemplate>
-          {desktopView ? (
-            <div className="flex w-full overflow-hidden">
-              <Hero />
-              <AboutMe />
-              <Credentials />
-              <Contact />
-            </div>
-          ) : (
-            <div className="lg:hidden h-full scroll-smooth">
-              <Navbar />
-              <Hero />
-              <AboutMe />
-              <Freelance />
-              <div className="bg-white/[.05]">
+        {
+          <PageTemplate>
+            {desktopView ? (
+              <div className="flex w-full overflow-hidden">
+                <Hero />
+                <AboutMe />
                 <Credentials />
-              </div>{" "}
-              <Contact />
-            </div>
-          )}
-        </PageTemplate>
+                <Contact />
+              </div>
+            ) : (
+              <div className="lg:hidden h-full scroll-smooth">
+                <Navbar />
+                <Hero />
+                <AboutMe />
+                <Freelance />
+                <div className="bg-white/[.05]">
+                  <Credentials />
+                </div>{" "}
+                <Contact />
+              </div>
+            )}
+          </PageTemplate>
+        }
       </main>
     </div>
   );
