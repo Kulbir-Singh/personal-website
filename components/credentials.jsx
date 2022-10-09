@@ -1,21 +1,8 @@
-import { useSpring, animated } from "react-spring";
 import React, { useState } from "react";
 
 export default function Credentials() {
   const [tab, setTab] = useState("main");
-  const openAnimation = (open) =>
-    useSpring({
-      from: { transform: "translateX(0)" },
-      to: { transform: "translateX(100px)", display: "flex" },
-      config: { duration: "1000" },
-    });
 
-  const closeAnimation = (open) =>
-    useSpring({
-      from: { height: "100%" },
-      to: { height: "0", display: "none" },
-      config: { duration: "1000" },
-    });
   return (
     <div
       className="px-12 lg:px-0 flex flex-col w-full h-full items-center text-white/80 bg-white/[.05] lg:absolute lg:opacity-0 duration-1000 justify-center"
