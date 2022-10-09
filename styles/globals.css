@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  body,
+  html {
+    overflow: hidden;
+  }
+}
+
+@keyframes zoomout {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    overflow: hidden;
+  }
+
+  100% {
+    height: 0;
+    width: 0;
+    transform: translateX(-1000px);
+    opacity: 0;
+    overflow: hidden;
+  }
+}
+
+@keyframes zoomin {
+  0% {
+    height: 25%;
+    width: 25%;
+    transform: scale(0);
+    transform: translateY(-100px);
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  100% {
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+    transform: translateY(0px);
+    opacity: 1;
+    overflow: hidden;
+  }
+}
+
+@keyframes spinAcross {
+  0% {
+    transform-origin: center;
+    transform: translateX(-200px) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translateX(-190px) rotate(10deg);
+    opacity: 1;
+  }
+
+  99% {
+    transform: translateX(190px) rotate(1400deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(200px) rotate(1440deg);
+  }
+}
+
+.zoomOutContainer {
+  animation: zoomout 1s ease;
+}
+
+.zoomInContainer {
+  animation: zoomin 1s ease;
+}
+
+.hiddenContent {
+  display: none;
+}
+
+.spinAcrossScreen {
+  animation: spinAcross 8s infinite;
+}
+
+@keyframes rotateDots {
+  0% {
+    transform: translateX(45px);
+  }
+
+  12.5% {
+    transform: translateX(45px);
+  }
+
+  25% {
+    transform: translateY(45px);
+  }
+
+  50% {
+    transform: translateY(45px);
+  }
+
+  62.5% {
+    transform: translateX(-45px);
+  }
+
+  75% {
+    transform: translateX(-45px);
+  }
+
+  87.5% {
+    transform: translateY(-45px);
+  }
+
+  100% {
+    transform: translateY(-45px);
+  }
+}
+
+.dots {
+  animation: rotateDots 10s ease-in-out infinite;
+  background-image: radial-gradient(
+    rgba(110, 110, 110, 0.2) 5%,
+    transparent 0%
+  );
+  background-color: transparent;
+  background-position: 0 0, 0px 0;
+  background-size: 45px 45px;
+}
