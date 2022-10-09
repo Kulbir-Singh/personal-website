@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build && mkdir build && cp index.html build && cp -r dist build/dist
+  command = "yarn build"
   publish = "build"
 
 [[plugins]]
