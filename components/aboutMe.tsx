@@ -47,7 +47,12 @@ export default function AboutMe() {
               </div>
             </div>
             <button className="px-9 py-2 w-fit bg-blue-600 rounded-full my-5 text-white/80 font-semibold">
-              <p className="cursor-pointer">Download CV</p>
+              <a
+                href="https://github.com/Kulbir-Singh/portfolio/blob/main/Resume-Kulbir-Singh.docx.pdf"
+                className="cursor-pointer"
+              >
+                Download CV
+              </a>
             </button>
           </div>
         </div>

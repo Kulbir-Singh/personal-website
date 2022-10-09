@@ -12,9 +12,13 @@ export default function Freelance() {
             <div className="text-white  text-5xl font-semibold mb-10 z-30 text-center leading-[70px] md:leading-normal px-6">
               I am available for freelance work
             </div>
-            <button className="px-9 py-2 w-fit bg-blue-600 z-30 rounded-full my-5 text-white/80 font-semibold">
+            <a
+              href="https://www.fiverr.com/kulbirsingh764/use-my-full-stack-web-developer-knowledge"
+              target="_blank"
+              className="px-9 py-2 w-fit bg-blue-600 z-30 rounded-full my-5 text-white/80 font-semibold"
+            >
               Get in Touch
-            </button>
+            </a>
             <img
               src="/freelanceImage.jpg"
               className="h-full object-cover w-full absolute z-20 top-0 brightness-[.25] grayscale"

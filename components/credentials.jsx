@@ -70,9 +70,13 @@ export default function Credentials() {
             <br />
             Procreate
           </p>
-          <button className="px-9 py-2 w-fit bg-custom-blue rounded-full my-6 text-white/80 font-semibold min-w-[180px]">
+          <a
+            href="https://www.fiverr.com/kulbirsingh764/use-my-full-stack-web-developer-knowledge"
+            target="_blank"
+            className="px-9 py-2 w-fit bg-custom-blue rounded-full my-6 text-white/80 font-semibold min-w-[180px]"
+          >
             Get in Touch
-          </button>
+          </a>
         </div>
       </div>
     </div>
