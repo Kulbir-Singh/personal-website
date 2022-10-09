@@ -13,7 +13,7 @@ export default function Contact() {
         <span className="relative sm:left-24">Touch</span>
       </p>
       <div className="w-full h-fit py-12 px-6 sm:px-12 bg-black/70 max-w-[900px] rounded-md z-20">
-        <p className="text-5xl font-serif">Get in Touch</p>
+        <p className="text-5xl font-semibold">Get in Touch</p>
         <form
           action="https://api.web3forms.com/submit"
           method="POST"
