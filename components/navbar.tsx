@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [openNav, setOpenNav] = useState(false);
@@ -48,7 +49,18 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className="w-screen h-screen bg-gray-300 absolute z-30">
+      <motion.div
+        className="w-screen h-screen bg-gray-300 absolute z-30"
+        initial={{ opacity: 0, scale: 0, top: -1500 }}
+        animate={{
+          opacity: openNav ? 1 : 0,
+          left: openNav ? 0 : 1500,
+          top: openNav ? 56 : -1500,
+          scale: openNav ? 1 : 0,
+          borderRadius: openNav ? 0 : 1000,
+        }}
+        transition={{ duration: 0.75 }}
+      >
         <button
           onClick={() => {
             closeNavBar();
@@ -89,7 +101,7 @@ export default function Navbar() {
             Contact
           </a>
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 }
