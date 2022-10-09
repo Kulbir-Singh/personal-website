@@ -9,7 +9,7 @@ export default function Credentials() {
       id="section2"
     >
       <div className="w-full text-center">
-        <p className="text-3xl font-semibold mb-24 uppercase tracking-widest text-white/80">
+        <p className="text-5xl font-semibold mb-24 uppercase tracking-widest text-white/80">
           Abilities
         </p>
       </div>

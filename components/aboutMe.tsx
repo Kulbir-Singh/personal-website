@@ -8,7 +8,7 @@ export default function AboutMe() {
     >
       <div className="w-full h-full">
         <div className="text-center">
-          <p className="text-3xl font-semibold">About Me</p>
+          <p className="text-5xl font-semibold">About Me</p>
           <p className="mt-5 leading-9 text-lg">
             Hello, my name is Kulbir Singh. I am a full stack web developer from
             Montreal, Quebec. I obtained my diploma from Concordia University

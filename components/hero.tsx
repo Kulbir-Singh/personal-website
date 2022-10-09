@@ -13,7 +13,7 @@ export default function Hero() {
         />
         <div className="absolute w-full lg:w-full h-3/4 flex items-center justify-center lg:justify-start xl:flex-row flex-col-reverse px-12">
           <div className="bg-black/50 w-full md:w-6/12 h-80 xl:left-12 relative rounded-xl xl:top-0 top-8 text-white/80 flex flex-col justify-center items-center xl:items-start max-w-[500px] px-12 space-y-4  duration-500">
-            <p className="text-4xl">Kulbir Singh</p>
+            <p className="text-5xl">Kulbir Singh</p>
             <p className="text-2xl">Full-Stack Developer</p>
             <div className="flex space-x-5 pt-4">
               <a
@@ -38,7 +38,7 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          <div className="bg-black w-60 md:w-[350px] xl:w-96 h-60 md:h-96 rounded-full border-2 xl:relative right-12 overflow-hidden">
+          <div className="bg-black w-60 md:w-[385px] xl:w-96 h-60 md:h-96 rounded-full border-2 xl:relative right-12 overflow-hidden">
             <img
               src="/profile.PNG"
               className="object-cover relative h-full w-full"
