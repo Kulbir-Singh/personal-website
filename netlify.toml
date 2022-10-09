@@ -3,5 +3,11 @@
   to = "/index.html"
   status = 200
 
+[dev]
+framework = "#static"
+
+[[headers]]
+  for = "/_next/image/*"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
