@@ -56,7 +56,6 @@ export default function Contact() {
           >
             Submit
           </button>
-          <div class="h-captcha" data-captcha="true"></div>
         </form>
         <Script
           src="https://web3forms.com/client/script.js"
