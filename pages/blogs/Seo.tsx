@@ -76,7 +76,7 @@ export default function Seo() {
         </h1>
         <p className=" max-w-[700px] text-center m-auto py-6 text-lg">
           Are you tired of struggling to get your website to rank higher in
-          search engine results? Look no further than Google's official SEO
+          search engine results? Look no further than Google&apos;s official SEO
           tools!{" "}
         </p>
         <div className="flex m-auto mb-12 w-fit">
@@ -99,11 +99,11 @@ export default function Seo() {
           <p className="py-6 m-auto border-y border-custom-green-400">
             Search Engine Optimization (SEO) is a critical component of any
             online marketing strategy. With the majority of online traffic
-            coming from search engines, it's important to ensure your website is
-            optimized for maximum visibility. Thankfully, Google offers a suite
-            of powerful tools to help you improve your SEO efforts. In this
-            post, we'll explore some of these tools and how you can use them to
-            boost your website's SEO.
+            coming from search engines, it&apos;s important to ensure your
+            website is optimized for maximum visibility. Thankfully, Google
+            offers a suite of powerful tools to help you improve your SEO
+            efforts. In this post, we&apos;ll explore some of these tools and
+            how you can use them to boost your website&apos;s SEO.
           </p>
           <div className="py-6">
             {seoToolList.map((toolItem, index) => {
@@ -137,22 +137,23 @@ export default function Seo() {
             })}
           </div>
           <p>
-            By using these official Google tools, you can improve your website's
-            SEO and ensure that your site is optimized for maximum visibility in
-            search engine results. Additionally, you can use other third-party
-            tools like the Neil Patel SEO Analyzer to further analyze your
-            website's SEO and get suggestions for improvement.
+            By using these official Google tools, you can improve your
+            website&apos;s SEO and ensure that your site is optimized for
+            maximum visibility in search engine results. Additionally, you can
+            use other third-party tools like the Neil Patel SEO Analyzer to
+            further analyze your website&apos;s SEO and get suggestions for
+            improvement.
           </p>
           <p className="py-6">
             In conclusion, SEO is critical for online success, and Google offers
             a suite of powerful tools to help you improve your SEO efforts. By
             using tools like Google Search Console, Google Analytics, Google
             Keyword Planner, and Google PageSpeed Insights, you can identify the
-            issues that are affecting your site's SEO and take steps to improve
-            your site's visibility in search engine results. For even more
-            in-depth analysis, you can also use third-party tools like the Neil
-            Patel SEO Analyzer. Start using these tools today to improve your
-            SEO and drive more traffic to your website.
+            issues that are affecting your site&apos;s SEO and take steps to
+            improve your site&apos;s visibility in search engine results. For
+            even more in-depth analysis, you can also use third-party tools like
+            the Neil Patel SEO Analyzer. Start using these tools today to
+            improve your SEO and drive more traffic to your website.
           </p>
         </div>
       </div>

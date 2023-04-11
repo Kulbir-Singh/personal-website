@@ -126,7 +126,7 @@ export default function Projects() {
     <section className="max-w-[1300px] m-auto px-6">
       <div className="pt-20 text-5xl font-thin tracking-wider lg:pt-60">
         <div className="w-10 border border-custom-green-400" />
-        <p>Projects I've</p>
+        <p>Projects I&apos;ve</p>
         <p>worked on</p>
       </div>
       {projects.map((project) => {

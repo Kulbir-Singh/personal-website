@@ -40,7 +40,9 @@ export default function Home() {
             <div className="absolute left-6 bottom-6 sm:bottom-12 w-fit">
               {"scroll".split("").map((letter) => {
                 return (
-                  <p className="text-lg text-center sm:text-xl">{letter}</p>
+                  <p key={letter} className="text-lg text-center sm:text-xl">
+                    {letter}
+                  </p>
                 );
               })}
               <Picture

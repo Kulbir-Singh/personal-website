@@ -30,19 +30,27 @@ export default function AboutMe() {
             <p className="my-4 text-3xl font-semibold">Interests</p>
             <div className="text-lg flex justify-between max-w-[500px] w-full">
               <div className="flex flex-col items-center justify-between w-1/4 h-24">
-                <img src="/airplane.png" className="w-16 h-16" />
+                <picture>
+                  <img src="/airplane.png" className="w-16 h-16" alt="" />
+                </picture>
                 <p>Travel</p>
               </div>
               <div className="flex flex-col items-center justify-between w-1/4 h-24 pt-1">
-                <img src="/movie.png" className="w-12 h-12" />
+                <picture>
+                  <img src="/movie.png" className="w-12 h-12" alt="" />
+                </picture>
                 <p>Movies</p>
               </div>
               <div className="flex flex-col items-center justify-between w-1/4 h-24">
-                <img src="/music.png" className="w-14 h-14" />
+                <picture>
+                  <img src="/music.png" className="w-14 h-14" alt="" />
+                </picture>
                 <p>Music</p>
               </div>
               <div className="flex flex-col items-center justify-between w-1/4 h-24">
-                <img src="./hiking.png" className="w-16 h-16" />
+                <picture>
+                  <img src="./hiking.png" className="w-16 h-16" alt="" />
+                </picture>
                 <p>Hiking</p>
               </div>
             </div>

@@ -32,8 +32,8 @@ export default function Blogs() {
 
               <p className="pb-3">
                 Are you tired of struggling to get your website to rank higher
-                in search engine results? Look no further than Google's official
-                SEO tools!
+                in search engine results? Look no further than Google&apos;s
+                official SEO tools!
               </p>
               <div className="flex w-fit">
                 <p className="font-bold">Read Post</p>
@@ -66,8 +66,8 @@ export default function Blogs() {
 
               <p className="pb-3">
                 Are you tired of struggling to get your website to rank higher
-                in search engine results? Look no further than Google's official
-                SEO tools!
+                in search engine results? Look no further than Google&apos;s
+                official SEO tools!
               </p>
               <div className="flex w-fit">
                 <p className="font-bold">Read Post</p>

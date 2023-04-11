@@ -54,9 +54,9 @@ export default function ProfileManagement() {
           The Importance of Google Business Profile Management
         </h1>
         <p className=" max-w-[700px] text-center m-auto py-6 text-lg">
-          In today's digital age, a strong online presence is essential for any
-          business to thrive, and there's no better place to start than with
-          Google Business Profile Management.
+          In today&apos;s digital age, a strong online presence is essential for
+          any business to thrive, and there&apos;s no better place to start than
+          with Google Business Profile Management.
         </p>
         <div className="flex m-auto mb-12 w-fit">
           <Picture
