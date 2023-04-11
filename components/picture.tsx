@@ -24,7 +24,7 @@ export default function Picture({
           src={src}
           alt={alt}
           className={classNames(
-            animate ? " hover:scale-[1.03]" : "",
+            animate ? " hover:scale-[1.03]" : "scale-[1]",
             "object-cover w-full h-full duration-500"
           )}
         />

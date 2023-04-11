@@ -3,6 +3,7 @@ import Picture from "../components/picture";
 import Projects from "../components/projects";
 import ImageAnimation from "../components/imageAnimation";
 import Blogs from "../components/blogs";
+import Nav from "../components/nav";
 const tools = ["Tailwind", "Nextjs", "Figma", "React"];
 const resources = [
   "SEO",
@@ -22,32 +23,11 @@ export default function Home() {
 
       <main className="overflow-x-hidden text-custom-green-900 bg-custom-green-100">
         <section className="relative heroSection snap-section ">
-          <div className="w-full  sm:flex">
+          <div className="w-full sm:flex">
             <ImageAnimation />
           </div>
           <div className="max-w-[1300px] m-auto relative h-screen flex flex-col items-center w-full z-10">
-            <header className="w-full p-6 mt-3 bg-custom-green-100/50 rounded-3xl">
-              <div className="flex w-full ">
-                <div className="flex justify-between w-full border-y border-custom-green-900">
-                  <Picture src="./name.png" className="w-12 py-2" />
-                  <div className="flex items-center">
-                    <div className="flex overflow-hidden relative cursor-pointer [&>div]:hover:translate-y-0 [&>div]:hover:translate-x-0 [&>span]:hover:w-full [&>div]:duration-500 [&>span]:duration-700">
-                      <span className="absolute w-0 border -translate-x-0.5 border-custom-green-900 top-[26px]" />
-                      <p className="text-xl font-semibold">LinkedIn</p>
-                      <Picture
-                        src="./arrowDown.svg"
-                        className="-rotate-[135deg] translate-x-5 -translate-y-7 h-fit w-fit"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="m-auto ml-4 space-y-2 odd:[&>div]:hover:w-full odd:[&>div]:hover:ml-0 odd:[&>div]:duration-1000 cursor-pointer">
-                  <div className="w-6 border border-custom-green-900" />
-                  <div className="w-12 border border-custom-green-900" />
-                  <div className="w-6 ml-6 border border-custom-green-900" />
-                </div>
-              </div>
-            </header>
+            <Nav />
             <div className="absolute w-[100px] top-[22%] h-[100px] rounded-full left-6 border border-custom-green-900 z-10" />
             <div className="absolute w-[200px] bottom-0 sm:bottom-[12%] h-[200px] rounded-full left-[25%] border border-custom-green-900 z-10 bg-custom-green-300/50" />
             <h1 className="lg:text-[7em] text-[3em] sm:text-[5em] font-thin m-auto -translate-y-12 -translate-x-10 lg:-translate-x-20 relative z-20">

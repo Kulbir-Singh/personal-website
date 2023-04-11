@@ -90,6 +90,11 @@ main {
   position: relative;
   right: 0px;
 }
+
+li {
+  list-style-type: disc;
+  margin-left: 32px;
+}
 /* html,
 body {
   padding: 0;
