@@ -124,7 +124,10 @@ export default function Projects() {
   }, []);
   return (
     <section className="max-w-[1300px] m-auto px-6">
-      <div className="pt-20 text-5xl font-thin tracking-wider lg:pt-60">
+      <div
+        className="pt-20 text-5xl font-thin tracking-wider lg:pt-60"
+        data-inviewport="slide-left"
+      >
         <div className="w-10 border border-custom-green-400" />
         <p>Projects I&apos;ve</p>
         <p>worked on</p>
@@ -207,7 +210,7 @@ const ProjectDescription = ({
         <Picture
           src="./arrow.svg"
           alt="arrow icon"
-          className="absolute pt-1 ml-3 duration-1000 h-fit"
+          className="absolute hidden pt-1 ml-3 duration-1000 sm:flex h-fit"
         />
         <Picture
           src="./arrow.svg"

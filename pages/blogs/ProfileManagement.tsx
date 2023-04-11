@@ -47,17 +47,19 @@ export default function ProfileManagement() {
     <main className="overflow-x-hidden text-custom-green-900 bg-custom-green-100">
       <div className="max-w-[1300px] m-auto">
         <Nav />
-        <p className="pt-20 text-xl font-bold text-center">
-          Google Business Profile Management
-        </p>
-        <h1 className="text-[3em] sm:text-[4em] font-thin m-auto text-center leading-[1] max-w-[700px] pt-6">
-          The Importance of Google Business Profile Management
-        </h1>
-        <p className=" max-w-[700px] text-center m-auto py-6 text-lg">
-          In today&apos;s digital age, a strong online presence is essential for
-          any business to thrive, and there&apos;s no better place to start than
-          with Google Business Profile Management.
-        </p>
+        <div className="px-6">
+          <p className="w-1/2 pt-20 m-auto text-xl font-bold text-center sm:w-full">
+            Google Business Profile Management
+          </p>
+          <h1 className="text-[3em] sm:text-[4em] font-thin m-auto text-center leading-[1] max-w-[700px] pt-6">
+            The Importance of Google Business Profile Management
+          </h1>
+          <p className=" max-w-[700px] text-center m-auto py-6 text-lg">
+            In today&apos;s digital age, a strong online presence is essential
+            for any business to thrive, and there&apos;s no better place to
+            start than with Google Business Profile Management.
+          </p>
+        </div>
         <div className="flex m-auto mb-12 w-fit">
           <Picture
             src="../smallkulbirProfilePicture.jpg"
@@ -72,7 +74,7 @@ export default function ProfileManagement() {
         <Picture
           src="../gpm.jpg"
           alt="seo image"
-          className="h-[550px] m-auto mb-12 max-w-[900px]"
+          className="h-[550px] m-auto mb-12 max-w-[900px] overflow-hidden"
         />
         <div className="px-6 max-w-[900px] m-auto text-lg">
           <p className="py-6 m-auto border-y border-custom-green-400">

@@ -19,7 +19,7 @@ export default function Picture({
   return (
     <div className={className}>
       <picture>
-        <source src={webPSrc} type="image/webp" />
+        <source srcSet={webPSrc} type="image/webp" />
         <img
           src={src}
           alt={alt}

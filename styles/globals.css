@@ -20,16 +20,6 @@ body {
   background-color: #fffef5;
 }
 
-main {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-}
-
-.snap-section {
-  scroll-snap-align: center;
-}
-
 .heroImage[data-status="inactive"] {
   opacity: 0;
 }
