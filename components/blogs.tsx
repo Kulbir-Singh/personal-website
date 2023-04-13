@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import Picture from "./picture";
 import classNames from "../utils/twClassNames";
 import { useInView, m, LazyMotion, domAnimation } from "framer-motion";
@@ -12,7 +12,7 @@ const BlogPosts = [
     date: "20 Jan 2023",
     marker: "SEO",
     url: "/blogs/Seo",
-    imgUrl: "../seo.jpg",
+    imgUrl: "../smallseo.jpg",
   },
   {
     title: "The Importance of Google Business Profile Management",
@@ -21,7 +21,7 @@ const BlogPosts = [
     date: "10 Feb 2023",
     marker: "Google Business Profile",
     url: "/blogs/ProfileManagement",
-    imgUrl: "../gpm.jpg",
+    imgUrl: "../smallgpm.jpg",
   },
 ];
 export default function Blogs() {

@@ -23,6 +23,7 @@ export default function Nav() {
             onClick={() => {
               setOpenMenu(!openMenu);
             }}
+            aria-label="navbar-menu"
           >
             <div className="w-6 border border-custom-green-900 max-w-[48px] rotate-45 translate-y-[5px]" />
             <div className="w-6 ml-6 border border-custom-green-900 max-w-[48px] -rotate-[135deg] -translate-y-[5px]" />
@@ -75,6 +76,7 @@ export default function Nav() {
             onClick={() => {
               setOpenMenu(!openMenu);
             }}
+            aria-label="navbar-menu"
           >
             <div className="w-6 border border-custom-green-900" />
             <div className="w-12 border border-custom-green-900" />
