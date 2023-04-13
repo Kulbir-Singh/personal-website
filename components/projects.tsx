@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Picture from "./picture";
 import classNames from "../utils/twClassNames";
+import Link from "next/link";
 interface Project {
   title: string;
   stats: { title: string; imgSrc: string; alt: string }[];
@@ -198,21 +199,27 @@ const ProjectDescription = ({
         })}
       </div>
       <p className="pt-6 pb-1.5 text-lg">{description}</p>
-      <div className="flex relative mt-3 items-center justify-center overflow-hidden p-3 text-2xl duration-200 cursor-pointer w-fit bg-custom-green-300 odd:[&>div]:hover:translate-x-[150%] even:[&>div]:hover:translate-x-[150%]">
-        <p className="relative z-20 text-[20px] bg-custom-green-300">
-          View Project
-        </p>
-        <Picture
-          src="./arrow.svg"
-          alt="arrow icon"
-          className="absolute hidden pt-1 ml-3 duration-1000 sm:flex h-fit"
-        />
-        <Picture
-          src="./arrow.svg"
-          alt="arrow icon"
-          className="pt-1 ml-3 duration-1000 h-fit"
-        />
-      </div>
+      <Link
+        href={{
+          pathname: "/projects/" + title.replace(" ", ""),
+        }}
+      >
+        <div className="flex relative mt-3 items-center justify-center overflow-hidden p-3 text-2xl duration-200 cursor-pointer w-fit bg-custom-green-300 odd:[&>div]:hover:translate-x-[150%] even:[&>div]:hover:translate-x-[150%]">
+          <p className="relative z-20 text-[20px] bg-custom-green-300">
+            View Project
+          </p>
+          <Picture
+            src="./arrow.svg"
+            alt="arrow icon"
+            className="absolute hidden pt-1 ml-3 duration-1000 sm:flex h-fit"
+          />
+          <Picture
+            src="./arrow.svg"
+            alt="arrow icon"
+            className="pt-1 ml-3 duration-1000 h-fit"
+          />
+        </div>
+      </Link>
     </div>
   );
 };
