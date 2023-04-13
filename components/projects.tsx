@@ -25,7 +25,7 @@ const projects: Project[] = [
         alt: "edit icon",
       },
       {
-        title: "Figma to code",
+        title: "Figma to Code",
         imgSrc: "./figma.svg",
         alt: "figma icon",
       },
@@ -54,12 +54,12 @@ const projects: Project[] = [
         alt: "edit icon",
       },
       {
-        title: "Figma to code",
+        title: "Figma to Code",
         imgSrc: "./figma.svg",
         alt: "figma icon",
       },
       {
-        title: "Plaid integration",
+        title: "End to End Testing",
         imgSrc: "./card.svg",
         alt: "card icon",
       },
@@ -73,24 +73,19 @@ const projects: Project[] = [
     webPSrc: "./chromehill.webp",
     stats: [
       {
-        title: "Collaborative Work",
-        imgSrc: "./collab.svg",
-        alt: "collab icon",
-      },
-      {
         title: "UI/UX Design",
         imgSrc: "./edit.svg",
         alt: "edit icon",
       },
       {
-        title: "Figma to code",
+        title: "Figma to Code",
         imgSrc: "./figma.svg",
         alt: "figma icon",
       },
       {
-        title: "Plaid integration",
-        imgSrc: "./card.svg",
-        alt: "card icon",
+        title: "Seo Optimization",
+        imgSrc: "./seo.svg",
+        alt: "seo icon",
       },
     ],
     description:
@@ -187,7 +182,7 @@ const ProjectDescription = ({
         {stats.map((stat) => {
           return (
             <div key={stat.title} className="p-[6px] w-fit">
-              <div className="flex items-center p-2.5 shadow-md bg-custom-green-300 w-fit">
+              <div className="flex items-center p-2.5 bg-custom-green-300 w-fit">
                 <Picture
                   src={stat.imgSrc}
                   alt={stat.alt}

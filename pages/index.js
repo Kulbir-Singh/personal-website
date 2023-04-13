@@ -5,6 +5,7 @@ import ImageAnimation from "../components/imageAnimation";
 import Blogs from "../components/blogs";
 import Nav from "../components/nav";
 import About from "../components/about";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -56,22 +57,24 @@ export default function Home() {
           <p className="md:text-[90px] text-[50px] sm:text-[60px] uppercase text-center lg:text-right relative z-10 font-thin">
             LOOKING FOR opportunities
           </p>
-          <div className="w-[400px] scale-75 sm:scale-100 h-[400px] md:w-[500px] md:min-w-[500px] overflow-hidden md:h-[500px] rounded-full border-2 -translate-x-4 lg:-translate-x-20 m-auto p-6 border-custom-green-400">
-            <div className="relative flex items-center justify-center cursor-pointer w-full h-full rounded-full bg-custom-green-400 odd:[&>div]:hover:rotate-180 duration-[3000ms] odd:[&>div]:opacity-0 odd:[&>div]:hover:opacity-100">
-              <div className="w-full h-full duration-[2500ms]">
+          <Link href="mailto: kulbir2406@gmail.com">
+            <div className="w-[400px] scale-75 sm:scale-100 h-[400px] md:w-[500px] md:min-w-[500px] overflow-hidden md:h-[500px] rounded-full border-2 -translate-x-4 lg:-translate-x-20 m-auto p-6 border-custom-green-400">
+              <div className="relative flex items-center justify-center cursor-pointer w-full h-full rounded-full bg-custom-green-400 odd:[&>div]:hover:rotate-180 duration-[3000ms] odd:[&>div]:opacity-0 odd:[&>div]:hover:opacity-100">
+                <div className="w-full h-full duration-[2500ms]">
+                  <Picture
+                    src="./contactme.svg"
+                    className="absolute top-[2px] w-full h-full opacity-50 left-2 md:left-[15px]"
+                    alt="circular contact me icon"
+                  />
+                </div>
                 <Picture
-                  src="./contactme.svg"
-                  className="absolute top-[2px] w-full h-full opacity-50 left-2 md:left-[15px]"
-                  alt="circular contact me icon"
+                  src="./mail.svg"
+                  alt="mail icon"
+                  className="absolute w-full p-24 md:p-40"
                 />
               </div>
-              <Picture
-                src="./mail.svg"
-                alt="mail icon"
-                className="absolute w-full p-24 md:p-40"
-              />
             </div>
-          </div>
+          </Link>
         </section>
       </main>
     </div>

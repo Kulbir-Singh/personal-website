@@ -26,6 +26,7 @@ export default function About() {
             src="./profile.PNG"
             className="h-full overflow-hidden scale-[1.02] "
             alt="profile picture"
+            webPSrc="./profile.webp"
           />
         </div>
       </div>
@@ -47,7 +48,7 @@ export default function About() {
             {tools.map((tool) => {
               return (
                 <div key={tool} className="p-3 px-1.5">
-                  <p className="inline p-3 py-2 text-base shadow-md bg-custom-green-300">
+                  <p className="inline p-3 py-2 text-base bg-custom-green-300">
                     {tool}
                   </p>
                 </div>
@@ -60,7 +61,7 @@ export default function About() {
             {resources.map((tool) => {
               return (
                 <div key={tool} className="p-3 px-1.5">
-                  <p className="inline p-3 py-2 text-base shadow-md bg-custom-green-300">
+                  <p className="inline p-3 py-2 text-base bg-custom-green-300">
                     {tool}
                   </p>
                 </div>
