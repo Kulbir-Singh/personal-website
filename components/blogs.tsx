@@ -1,7 +1,8 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Picture from "./picture";
 import classNames from "../utils/twClassNames";
+import { useInView, m, LazyMotion, domAnimation } from "framer-motion";
 
 const BlogPosts = [
   {
@@ -23,12 +24,17 @@ const BlogPosts = [
     imgUrl: "../gpm.jpg",
   },
 ];
-
 export default function Blogs() {
-  const date = new Date();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <section className="max-w-[1300px] m-auto px-6 lg:pt-32 pt-20 snap-section">
-      <div data-inviewport="slide-left">
+    <section
+      className="max-w-[1300px] m-auto px-6 lg:pt-32 pt-20"
+      ref={ref}
+      id="blogs"
+    >
+      <div>
         <div className="w-10 border border-custom-green-400" />
         <p className="pb-6 text-5xl font-thin tracking-wider lg:pb-0">Blogs</p>
         <p className="py-6 text-lg">
@@ -37,47 +43,55 @@ export default function Blogs() {
         </p>
       </div>
 
-      <div
-        className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-        data-inviewport="slide-bottom"
-      >
-        {BlogPosts.map((blog) => {
-          return (
-            <Link key={blog.title} href={blog.url}>
-              <div className="flex odd:[&>div>p]:hover:underline max-h-[450px] overflow-hidden m-auto md:max-w-full cursor-pointer w-full flex-col relative bg-custom-green-300 hover:bg-custom-green-400 duration-500 ease-outs">
-                <div className="relative overflow-hidden left-[.5px] sm:h-[200px]">
-                  <Picture
-                    src={blog.imgUrl}
-                    alt="seo image"
-                    className="w-full h-[250px]"
-                  />
-                  <div
-                    className={classNames(
-                      "text-custom-green-100",
-                      "absolute z-10 flex justify-between w-full px-3 py-3 bg-gray-700 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-40 bottom-[0px] "
-                    )}
-                  >
-                    <p>{blog.date}</p>
-                    <p>{blog.marker}</p>
+      <LazyMotion features={domAnimation}>
+        <m.div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {BlogPosts.map((blog, index) => {
+            return (
+              <Link key={blog.title} href={blog.url}>
+                <m.div
+                  style={{
+                    transform: isInView ? "none" : "translateY(200px)",
+                    opacity: isInView ? 1 : 0,
+
+                    transition: "all 0.85s ease-out " + `${0.25 * index + 1}s`,
+                  }}
+                >
+                  <div className="posts duration-500 flex odd:[&>div>p]:hover:underline max-h-[450px] overflow-hidden m-auto md:max-w-full cursor-pointer w-full flex-col relative bg-custom-green-300 hover:bg-custom-green-400 ease-out">
+                    <div className="relative overflow-hidden left-[.5px] sm:h-[200px]">
+                      <Picture
+                        src={blog.imgUrl}
+                        alt="seo image"
+                        className="w-full h-[250px]"
+                      />
+                      <div
+                        className={classNames(
+                          "text-custom-green-100",
+                          "absolute z-10 flex justify-between w-full px-3 py-3 bg-gray-700 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-40 bottom-[0px] "
+                        )}
+                      >
+                        <p>{blog.date}</p>
+                        <p>{blog.marker}</p>
+                      </div>
+                    </div>
+                    <div className="sm:h-[250px] p-3 flex  flex-col sm:justify-between">
+                      <p className="font-bold">{blog.title}</p>
+                      <p className="my-3 overflow-hidden">{blog.subtitle}</p>
+                      <div className="flex w-fit">
+                        <p className="font-bold">Read Post</p>
+                        <Picture
+                          src="./arrowright.png"
+                          alt="right arrow"
+                          className="h-4 translate-x-2 translate-y-1 sm:h-3"
+                        />
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="sm:h-[250px] p-3 flex  flex-col sm:justify-between">
-                  <p className="font-bold">{blog.title}</p>
-                  <p className="my-3 overflow-hidden">{blog.subtitle}</p>
-                  <div className="flex w-fit">
-                    <p className="font-bold">Read Post</p>
-                    <Picture
-                      src="./arrowright.png"
-                      alt="right arrow"
-                      className="h-4 translate-x-2 translate-y-1 sm:h-3"
-                    />
-                  </div>
-                </div>
-              </div>
-            </Link>
-          );
-        })}
-      </div>
+                </m.div>
+              </Link>
+            );
+          })}
+        </m.div>
+      </LazyMotion>
     </section>
   );
 }

@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Nav from "../components/nav";
 
 export default function Document() {
   const date = new Date();
@@ -8,7 +7,7 @@ export default function Document() {
       <Head>
         <link rel="stylesheet" href="https://use.typekit.net/azj3cpk.css" />
       </Head>
-      <body className="relative heroSection">
+      <body className="relative">
         <Main />
         <NextScript />
         <footer className="m-auto">

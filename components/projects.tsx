@@ -123,7 +123,7 @@ export default function Projects() {
     };
   }, []);
   return (
-    <section className="max-w-[1300px] m-auto px-6">
+    <section className="max-w-[1300px] m-auto px-6" id="projects">
       <div
         className="pt-20 text-5xl font-thin tracking-wider lg:pt-60"
         data-inviewport="slide-left"
