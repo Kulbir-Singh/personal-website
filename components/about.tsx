@@ -1,5 +1,5 @@
 import Picture from "./picture";
-const tools = ["Tailwind", "Nextjs", "Figma", "React"];
+const tools = ["Tailwind", "Nextjs", "Figma", "React", "React-Native"];
 const resources = [
   "SEO",
   "Google business management",
