@@ -50,6 +50,14 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <div
+          className="pt-20 text-5xl font-thin tracking-wider lg:pt-60 px-6 max-w-[1300px] m-auto"
+          data-inviewport="slide-left"
+        >
+          <div className="w-10 border border-custom-green-400" />
+          <p>Projects I&apos;ve</p>
+          <p>worked on</p>
+        </div>
         <Projects />
         <About />
         <Blogs />

@@ -11,28 +11,28 @@ interface Project {
 }
 const projects: Project[] = [
   {
-    imgSrc: "./letsplit.png",
-    webPSrc: "./letsplit.webp",
+    imgSrc: "/letsplit.png",
+    webPSrc: "/letsplit.webp",
     title: "Let's Split",
     stats: [
       {
         title: "Collaborative Work",
-        imgSrc: "./collab.svg",
+        imgSrc: "/collab.svg",
         alt: "collab icon",
       },
       {
         title: "UI/UX Design",
-        imgSrc: "./edit.svg",
+        imgSrc: "/edit.svg",
         alt: "edit icon",
       },
       {
         title: "Figma to Code",
-        imgSrc: "./figma.svg",
+        imgSrc: "/figma.svg",
         alt: "figma icon",
       },
       {
         title: "Plaid integration",
-        imgSrc: "./card.svg",
+        imgSrc: "/card.svg",
         alt: "card icon",
       },
     ],
@@ -40,28 +40,28 @@ const projects: Project[] = [
       "Let's Split is an iOS app that enables users to split expenses with friends or family. Users can create a group, add members, and split bills for various activities, with the app calculating each person's share and sending payment requests.",
   },
   {
-    imgSrc: "./vidamoraHero.png",
+    imgSrc: "/vidamoraHero.png",
     title: "Vidamora",
-    webPSrc: "./vidamoraHero.webp",
+    webPSrc: "/vidamoraHero.webp",
     stats: [
       {
         title: "Collaborative Work",
-        imgSrc: "./collab.svg",
+        imgSrc: "/collab.svg",
         alt: "collab icon",
       },
       {
         title: "UI/UX Design",
-        imgSrc: "./edit.svg",
+        imgSrc: "/edit.svg",
         alt: "edit icon",
       },
       {
         title: "Figma to Code",
-        imgSrc: "./figma.svg",
+        imgSrc: "/figma.svg",
         alt: "figma icon",
       },
       {
         title: "End to End Testing",
-        imgSrc: "./card.svg",
+        imgSrc: "/card.svg",
         alt: "card icon",
       },
     ],
@@ -69,23 +69,23 @@ const projects: Project[] = [
       "Vidamora.com is an online dating platform that provides a safe and inclusive space for people to connect and find meaningful relationships. With a focus on user-friendliness and advanced security features, users can easily create profiles, search for matches, and interact with other members.",
   },
   {
-    imgSrc: "./chromehill.png",
+    imgSrc: "/chromehill.png",
     title: "Chromehill",
-    webPSrc: "./chromehill.webp",
+    webPSrc: "/chromehill.webp",
     stats: [
       {
         title: "UI/UX Design",
-        imgSrc: "./edit.svg",
+        imgSrc: "/edit.svg",
         alt: "edit icon",
       },
       {
         title: "Figma to Code",
-        imgSrc: "./figma.svg",
+        imgSrc: "/figma.svg",
         alt: "figma icon",
       },
       {
         title: "Seo Optimization",
-        imgSrc: "./seo.svg",
+        imgSrc: "/seo.svg",
         alt: "seo icon",
       },
     ],
@@ -119,15 +119,10 @@ export default function Projects() {
     };
   }, []);
   return (
-    <section className="max-w-[1300px] m-auto px-6" id="projects">
-      <div
-        className="pt-20 text-5xl font-thin tracking-wider lg:pt-60"
-        data-inviewport="slide-left"
-      >
-        <div className="w-10 border border-custom-green-400" />
-        <p>Projects I&apos;ve</p>
-        <p>worked on</p>
-      </div>
+    <section
+      className="max-w-[1300px] m-auto px-6 overflow-hidden"
+      id="projects"
+    >
       {projects.map((project) => {
         return (
           <div key={project.title} className="pt-20 sm:pt-40 snap-section">
@@ -209,12 +204,12 @@ const ProjectDescription = ({
             View Project
           </p>
           <Picture
-            src="./arrow.svg"
+            src="/arrow.svg"
             alt="arrow icon"
             className="absolute hidden pt-1 ml-3 duration-1000 sm:flex h-fit"
           />
           <Picture
-            src="./arrow.svg"
+            src="/arrow.svg"
             alt="arrow icon"
             className="pt-1 ml-3 duration-1000 h-fit"
           />
