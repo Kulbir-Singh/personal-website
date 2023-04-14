@@ -93,7 +93,7 @@ export default function Seo() {
         <Picture
           src="../seo.jpg"
           alt="seo image"
-          className="h-[550px] w-3/4 m-auto mb-12"
+          className="h-[550px] sm:w-3/4 m-auto mb-12"
         />
         <div className="px-6 max-w-[900px] m-auto text-lg">
           <p className="py-6 m-auto border-y border-custom-green-400">
