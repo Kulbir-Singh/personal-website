@@ -8,7 +8,7 @@ const options = ["home", "blogs", "about", "projects"];
 export default function Nav() {
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <header className="z-50 w-full px-6">
+    <header className="z-50 w-full">
       <div className="p-6 mt-6 bg-custom-green-100/40 rounded-3xl">
         <LazyMotion features={domAnimation}>
           <m.div
