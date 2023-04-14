@@ -142,39 +142,41 @@ export default function Project() {
   )[0];
   return (
     <main className="overflow-x-hidden text-custom-green-900 bg-custom-green-100">
-      <div className="">
-        <div className="relative z-10 m-auto max-w-[1300px] h-full">
-          <Nav />
-        </div>
-        <div className="m-auto max-w-[900px]">
-          <h1 className="text-[3em] sm:text-[4em] font-thin m-auto text-center leading-[1] max-w-[700px] py-6">
-            {project}
-          </h1>
-          <Picture
-            src={currentProject.imgSrc}
-            alt={currentProject.alt}
-            webPSrc={currentProject.webPSrc}
-            className="overflow-hidden brightness-[.85] m-auto w-full max-w-[700px]"
-          />
-          <div className="relative h-full p-6 text-lg w-fit ">
-            <div className="w-10 mt-6 border border-custom-green-400" />
-            <p className="pb-3 text-xl font-semibold">Project Description:</p>
-            <p>{currentProject.description}</p>
-            <div className="w-10 mt-6 border border-custom-green-400" />
-            <p className="text-xl font-semibold">Tools:</p>
-            <p>{currentProject.toolsDescription}</p>
-            {currentProject.tools.map((tool) => {
-              return (
-                <div key={tool.title} className="px-3">
-                  <p className="pt-3 font-semibold">{tool.title}</p>
-                  <p className="px-3 pb-3">{tool.description}</p>
-                </div>
-              );
-            })}
-            <p>{currentProject.conclusion}</p>
+      {currentProject && (
+        <div className="">
+          <div className="relative z-10 m-auto max-w-[1300px] h-full">
+            <Nav />
+          </div>
+          <div className="m-auto max-w-[900px]">
+            <h1 className="text-[3em] sm:text-[4em] font-thin m-auto text-center leading-[1] max-w-[700px] py-6">
+              {project}
+            </h1>
+            <Picture
+              src={currentProject.imgSrc}
+              alt={currentProject.alt}
+              webPSrc={currentProject.webPSrc}
+              className="overflow-hidden brightness-[.85] m-auto w-full max-w-[700px]"
+            />
+            <div className="relative h-full p-6 text-lg w-fit ">
+              <div className="w-10 mt-6 border border-custom-green-400" />
+              <p className="pb-3 text-xl font-semibold">Project Description:</p>
+              <p>{currentProject.description}</p>
+              <div className="w-10 mt-6 border border-custom-green-400" />
+              <p className="text-xl font-semibold">Tools:</p>
+              <p>{currentProject.toolsDescription}</p>
+              {currentProject.tools.map((tool) => {
+                return (
+                  <div key={tool.title} className="px-3">
+                    <p className="pt-3 font-semibold">{tool.title}</p>
+                    <p className="px-3 pb-3">{tool.description}</p>
+                  </div>
+                );
+              })}
+              <p>{currentProject.conclusion}</p>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </main>
   );
 }
