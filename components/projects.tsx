@@ -201,7 +201,7 @@ const ProjectDescription = ({
       <p className="pt-6 pb-1.5 text-lg">{description}</p>
       <Link
         href={{
-          pathname: "/projects/" + title.replace(" ", ""),
+          pathname: "/projects/" + title,
         }}
       >
         <div className="flex relative mt-3 items-center justify-center overflow-hidden p-3 text-2xl duration-200 cursor-pointer w-fit bg-custom-green-300 odd:[&>div]:hover:translate-x-[150%] even:[&>div]:hover:translate-x-[150%]">
