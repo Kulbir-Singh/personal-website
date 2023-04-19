@@ -126,31 +126,37 @@ export default function Projects() {
       {projects.map((project) => {
         return (
           <div key={project.title} className="pt-20 sm:pt-40 snap-section">
-            <div className="md:flex">
-              <div
-                className="relative z-10 overflow-hidden md:w-1/2 rounded-3xl"
-                data-inviewport="slide-bottom"
-              >
-                <Picture
-                  src={project.imgSrc}
-                  webPSrc={project.webPSrc}
-                  alt=""
-                  animate
-                  className="object-cover h-full scale-[1.2]"
-                />
+            <Link
+              href={{
+                pathname: "/projects/" + project.title,
+              }}
+            >
+              <div className="cursor-pointer md:flex">
+                <div
+                  className="relative z-10 overflow-hidden md:w-1/2 rounded-3xl"
+                  data-inviewport="slide-bottom"
+                >
+                  <Picture
+                    src={project.imgSrc}
+                    webPSrc={project.webPSrc}
+                    alt=""
+                    animate
+                    className="object-cover h-full scale-[1.2]"
+                  />
+                </div>
+                <div
+                  className="relative pt-6 md:w-1/2 md:px-6 md:pt-0"
+                  data-inviewport="slide-right"
+                >
+                  <div className="w-10 mb-3 border border-custom-green-400" />
+                  <ProjectDescription
+                    title={project.title}
+                    stats={project.stats}
+                    description={project.description}
+                  />
+                </div>
               </div>
-              <div
-                className="relative pt-6 md:w-1/2 md:px-6 md:pt-0"
-                data-inviewport="slide-right"
-              >
-                <div className="w-10 mb-3 border border-custom-green-400" />
-                <ProjectDescription
-                  title={project.title}
-                  stats={project.stats}
-                  description={project.description}
-                />
-              </div>
-            </div>
+            </Link>
           </div>
         );
       })}
@@ -194,27 +200,22 @@ const ProjectDescription = ({
         })}
       </div>
       <p className="pt-6 pb-1.5 text-lg">{description}</p>
-      <Link
-        href={{
-          pathname: "/projects/" + title,
-        }}
-      >
-        <div className="flex relative mt-3 items-center justify-center overflow-hidden p-3 text-2xl duration-200 cursor-pointer w-fit bg-custom-green-300 odd:[&>div]:hover:translate-x-[150%] even:[&>div]:hover:translate-x-[150%]">
-          <p className="relative z-20 text-[20px] bg-custom-green-300">
-            View Project
-          </p>
-          <Picture
-            src="/arrow.svg"
-            alt="arrow icon"
-            className="absolute hidden pt-1 ml-3 duration-1000 sm:flex h-fit"
-          />
-          <Picture
-            src="/arrow.svg"
-            alt="arrow icon"
-            className="pt-1 ml-3 duration-1000 h-fit"
-          />
-        </div>
-      </Link>
+
+      <div className="flex relative mt-3 items-center justify-center overflow-hidden p-3 text-2xl duration-200 cursor-pointer w-fit bg-custom-green-300 odd:[&>div]:hover:translate-x-[150%] even:[&>div]:hover:translate-x-[150%]">
+        <p className="relative z-20 text-[20px] bg-custom-green-300">
+          View Project
+        </p>
+        <Picture
+          src="/arrow.svg"
+          alt="arrow icon"
+          className="absolute hidden pt-1 ml-3 duration-1000 sm:flex h-fit"
+        />
+        <Picture
+          src="/arrow.svg"
+          alt="arrow icon"
+          className="pt-1 ml-3 duration-1000 h-fit"
+        />
+      </div>
     </div>
   );
 };

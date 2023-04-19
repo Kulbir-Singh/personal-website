@@ -3,6 +3,7 @@ import React from "react";
 import Nav from "../../components/nav";
 import Picture from "../../components/picture";
 import Projects from "../../components/projects";
+import Link from "next/link";
 
 interface Project {
   title: string;
@@ -136,7 +137,6 @@ export default function Project() {
   const currentProject = projects.filter(
     (projec) => projec.title == project
   )[0];
-  console.log(currentProject);
   return (
     <main className="overflow-x-hidden text-custom-green-900 bg-custom-green-100">
       {currentProject ? (
@@ -144,6 +144,21 @@ export default function Project() {
           <div className="relative z-10 m-auto max-w-[1300px] h-full">
             <Nav />
           </div>
+          <Link href="/">
+            <div className="cursor-pointer max-w-[1300px] m-auto px-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M16 22L6 12L16 2l1.775 1.775L9.55 12l8.225 8.225L16 22Z"
+                />
+              </svg>
+            </div>
+          </Link>
           <div className="m-auto max-w-[900px]">
             <h1 className="text-[3em] sm:text-[4em] font-thin m-auto text-center leading-[1] max-w-[700px] py-6">
               {project}
